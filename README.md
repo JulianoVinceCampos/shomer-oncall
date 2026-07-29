@@ -171,6 +171,23 @@ Note que `rivka` e `dan` (os observantes) carregam **a mesma weighted load que `
 4. **A opinião haláchica é um parâmetro.** O engine traz defaults mas nunca hard-coda um *psak*.
 5. **Read-only por padrão.** A ferramenta calcula e reporta; nunca muta seu pager sem um passo explícito de export.
 
+## Testar localmente
+
+```bash
+pip install -e ".[dev]"     # zero deps de runtime; extras de dev para teste/lint
+pytest                      # 77 testes (unit, golden, property, determinism, e2e)
+ruff check .                # lint
+mypy src                    # tipos
+
+# smoke-test end-to-end: roda o fluxo completo e afirma as garantias do domínio
+python examples/e2e_check.py
+```
+
+O `examples/e2e_check.py` executa o pipeline sobre o time de exemplo e verifica, com
+exit code, as garantias: zero hard violations, cobertura total, gate de fairness
+(Jain >= 0.95, spread <= 3.0, equity gap <= 5%), zero shifts de sexta/sábado para
+observantes, e determinismo. O mesmo smoke-test roda no CI.
+
 ## Status do projeto
 
 Implementação funcional com zero dependências de runtime, suíte de testes (77 testes, ~96% de coverage), ruff + mypy-strict limpos, e o conjunto completo de documentação. Ver [ROADMAP.md](docs/ROADMAP.md) para os próximos marcos.

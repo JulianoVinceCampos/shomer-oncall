@@ -30,3 +30,5 @@ jobs:
         run: pytest --cov=src/shomer_oncall --cov-report=term-missing --cov-fail-under=95
       - name: Suites property + determinism + golden
         run: pytest -m "property or determinism or golden" -q
+      - name: Smoke-test end-to-end
+        run: python examples/e2e_check.py
