@@ -1,0 +1,71 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "shomer-oncall"
+version = "0.1.0"
+description = "Rotação de plantão (on-call) ciente do calendário hebraico, com boundaries de Shabbat/Yom Tov calculados astronomicamente e divisão comprovadamente justa da carga."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { file = "LICENSE" }
+keywords = ["on-call", "scheduling", "hebrew-calendar", "zmanim", "shabbat", "fairness", "sre"]
+authors = [{ name = "JulianoVinceCampos" }]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Office/Business :: Scheduling",
+    "Typing :: Typed",
+]
+
+# Zero dependências de runtime por design: o calendário hebraico e os zmanim solares
+# são calculados a partir dos primeiros princípios em stdlib puro (docs/adr/0002), o
+# que torna a ferramenta determinística, offline e trivialmente portável.
+dependencies = []
+
+[project.optional-dependencies]
+yaml = ["pyyaml>=6.0"]  # opcional: arquivos de time em YAML (JSON funciona sem deps)
+dev = [
+    "pytest>=8.0",
+    "pytest-cov>=5.0",
+    "hypothesis>=6.100",    # property-based tests
+    "ruff>=0.4",
+    "mypy>=1.10",
+]
+
+[project.scripts]
+shomer-oncall = "shomer_oncall.cli:main"
+
+[project.urls]
+Homepage = "https://example.com/shomer-oncall"
+Documentation = "https://example.com/shomer-oncall/docs"
+Repository = "https://example.com/shomer-oncall"
+Changelog = "https://example.com/shomer-oncall/blob/main/CHANGELOG.md"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "UP", "B", "SIM", "RUF"]
+
+[tool.ruff.lint.per-file-ignores]
+# Os testes convencionalmente usam aliases de módulo (H, A, M).
+"tests/**" = ["N812"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+warn_unreachable = true
+
+[tool.pytest.ini_options]
+addopts = "-q --strict-markers"
+pythonpath = ["src"]
+markers = [
+    "determinism: verifica saída byte-idêntica para inputs idênticos",
+    "golden: compara contra fixtures autoritativas",
+    "property: property tests via hypothesis",
+]
