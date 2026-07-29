@@ -1,0 +1,29 @@
+{
+  "team": "platform-sre",
+  "diaspora": true,
+  "members": [
+    {
+      "id": "rivka",
+      "observes": ["shabbat", "yom_tov"],
+      "location": "America/Sao_Paulo:-23.55:-46.63:760",
+      "shitah": "mga_16.1"
+    },
+    {
+      "id": "dan",
+      "observes": ["shabbat", "yom_tov"],
+      "location": "Asia/Jerusalem:31.78:35.22:754",
+      "shitah": "gra_8.5",
+      "diaspora": false
+    },
+    {
+      "id": "alex",
+      "observes": [],
+      "location": "America/Sao_Paulo:-23.55:-46.63:760"
+    },
+    {
+      "id": "sam",
+      "observes": [],
+      "location": "Europe/London:51.51:-0.13:35"
+    }
+  ]
+}

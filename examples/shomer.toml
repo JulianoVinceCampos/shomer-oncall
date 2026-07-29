@@ -1,0 +1,14 @@
+[defaults]
+policy = "daily"
+handoff_hour_local = 10
+
+[weights]
+base = 1.0
+weekend_mult = 2.0
+holiday_mult = 1.5
+night_mult = 1.25
+
+[gate]
+jain_min = 0.95
+spread_max = 3.0
+equity_gap_max = 0.05
