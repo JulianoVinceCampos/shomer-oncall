@@ -79,7 +79,7 @@ J  =  ────────────────────────�
 - **Leitura:** `J = 1.0` significa loads idênticas. `J = 0.8` significa
   aproximadamente "tão justo quanto ~80% dos membros recebendo share igual".
 - **Por quê:** independente de escala, independente de tamanho da população,
-  contínuo e limitado — o índice padrão da literatura de alocação de recursos.
+  contínuo e limitado - o índice padrão da literatura de alocação de recursos.
 - **Ponto cego:** insensível a *quem* é prejudicado; parear com o equity gap.
 
 ### 3.2 Gini coefficient
@@ -135,7 +135,7 @@ gap% = gap / share_igual
 
 **Violation count é sagrado.** Mede quebras da [Invariante 1](DOMAIN.md#9-invariantes).
 Deve ser `0`. Um build que produz uma única violação está quebrado, não apenas
-injusto — é a única métrica sem valor não-zero aceitável.
+injusto - é a única métrica sem valor não-zero aceitável.
 
 ## 5. Acurácia de boundary
 
@@ -149,7 +149,7 @@ Quantifica o trade-off do [modelo solar próprio](adr/0002-zmanim-astronomico-vs
 
 Os instants autoritativos vêm de fontes publicadas de *zmanim* para as locations das
 fixtures; a comparação vive nos [golden tests](TESTING.md#2-golden-fixtures). O
-modelo solar em Python puro é preciso a poucos minutos — confortavelmente dentro do
+modelo solar em Python puro é preciso a poucos minutos - confortavelmente dentro do
 candle-lighting buffer (18 min), então o erro de boundary nunca pode causar uma
 violação real. É uma métrica de higiene de corretude, não de segurança, e um modelo
 de maior precisão pode ser trocado atrás da mesma interface se acurácia mais apertada
@@ -185,9 +185,9 @@ flowchart TD
 |---|---|---|
 | Sem violações hard | violation count `= 0` | `2` se quebrado |
 | Cobertura total | uncovered `= 0` | `3` se quebrado |
-| Fairness — Jain | `J ≥ 0.95` | `4` se quebrado |
-| Fairness — spread | `≤ 3.0` / 90d | `4` se quebrado |
-| Fairness — equity gap | `gap% ≤ 5%` | `4` se quebrado |
+| Fairness - Jain | `J ≥ 0.95` | `4` se quebrado |
+| Fairness - spread | `≤ 3.0` / 90d | `4` se quebrado |
+| Fairness - equity gap | `gap% ≤ 5%` | `4` se quebrado |
 | Acurácia de boundary | erro p95 `≤ 5 min` | testado em CI, não é gate de runtime |
 
 Os thresholds são defaults; cada um é sobrescrevível na config do time. O gate é
@@ -216,5 +216,5 @@ Shifts uncovered         : 0                           ✓
 ```
 
 Os observantes (`rivka`, `dan`) ficam dentro de `0.8%` do share igual enquanto pegam
-**zero** shifts de sexta à noite/sábado. Esse único fato — quantificado, não afirmado
-— é a tese inteira do projeto.
+**zero** shifts de sexta à noite/sábado. Esse único fato - quantificado, não afirmado
+- é a tese inteira do projeto.

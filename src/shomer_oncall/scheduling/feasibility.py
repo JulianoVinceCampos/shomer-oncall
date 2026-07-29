@@ -1,7 +1,7 @@
 """Feasibility filter: quais membros podem cobrir quais shifts.
 
 Um par (member, shift) é feasible sse o interval do shift não intersecta nenhum dos
-restricted intervals do membro. É um HARD filter — um par infeasible nunca pode ser
+restricted intervals do membro. É um HARD filter - um par infeasible nunca pode ser
 atribuído, garantindo a Invariante 1 (docs/DOMAIN.md#9). As listas de candidatos são
 ordenadas por member id para uma alocação determinística downstream.
 """

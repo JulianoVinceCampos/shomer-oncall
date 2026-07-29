@@ -1,7 +1,7 @@
 """Configuração de runtime: shift policy, load weights e gate thresholds.
 
 Carregada de um arquivo TOML ou JSON (ambos stdlib), ou construída com defaults.
-Todo threshold e weight vive aqui — nada é hard-coded na lógica
+Todo threshold e weight vive aqui - nada é hard-coded na lógica
 (docs/CLI.md#config-file, docs/METRICS.md#7).
 """
 

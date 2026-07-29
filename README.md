@@ -2,13 +2,13 @@
 
 # shomer-oncall
 
-**Rotação de plantão (on-call) ciente do calendário hebraico, que respeita Shabbat e Yamim Tovim — com boundaries calculados a partir de *zmanim* astronômicos, não de uma lookup table chumbada, e uma divisão comprovadamente justa da carga entre observantes e não-observantes.**
+**Rotação de plantão (on-call) ciente do calendário hebraico, que respeita Shabbat e Yamim Tovim - com boundaries calculados a partir de *zmanim* astronômicos, não de uma lookup table chumbada, e uma divisão comprovadamente justa da carga entre observantes e não-observantes.**
 
 [![CI](https://img.shields.io/badge/CI-passing-brightgreen)](#)
 [![Coverage](https://img.shields.io/badge/coverage-%E2%89%A595%25-brightgreen)](#)
 [![Python](https://img.shields.io/badge/python-3.11%2B-blue)](#)
 [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
-[![Determinism](https://img.shields.io/badge/output-deterministic-informational)](docs/TESTING.md#contrato-de-determinismo)
+[![Determinism](https://img.shields.io/badge/output-deterministic-informational)](docs/TESTING.md#4-contrato-de-determinismo)
 
 </div>
 
@@ -20,7 +20,7 @@
 
 Os dois problemas difíceis que ele resolve com honestidade:
 
-1. **Quando exatamente começa e termina um período restrito?** Shabbat começa no pôr do sol (com um buffer costumeiro) e termina no anoitecer (*tzais hakochavim*) — ambos são **eventos astronômicos que dependem de latitude, longitude, elevação e data**. Este projeto os calcula a partir de um modelo solar, não de uma tabela estática que apodrece em silêncio.
+1. **Quando exatamente começa e termina um período restrito?** Shabbat começa no pôr do sol (com um buffer costumeiro) e termina no anoitecer (*tzais hakochavim*) - ambos são **eventos astronômicos que dependem de latitude, longitude, elevação e data**. Este projeto os calcula a partir de um modelo solar, não de uma tabela estática que apodrece em silêncio.
 2. **O que significa "justo" quando algumas pessoas não podem pegar os slots de maior demanda?** Se observantes são simplesmente excluídos de sexta à noite e sábado, os não-observantes absorvem todo fim de semana para sempre. `shomer-oncall` define fairness como um objetivo explícito e mensurável (balanceamento de weighted load) e compensa o lado restrito nos shifts que ele *pode* pegar.
 
 > *Shomer* (שומר) significa "guardião" / "aquele que guarda [o Shabbat]". O nome é a spec.
@@ -46,7 +46,7 @@ Os dois problemas difíceis que ele resolve com honestidade:
 Schedulers de plantão (PagerDuty, Opsgenie, Grafana OnCall) modelam "estou indisponível" como um override manual que você cola toda semana. Isso é frágil:
 
 - O engenheiro observante tem que lembrar de bloquear **todo** Shabbat e **todo** Yom Tov, incluindo os que se movem (o calendário hebraico é lunisolar), os festivais de dois dias da diaspora e os dias de jejum.
-- Um fim de semana bloqueado simplesmente é repassado para o próximo da fila — não há **contabilidade** do fato de que as mesmas três pessoas não-observantes agora cobrem toda sexta à noite do ano.
+- Um fim de semana bloqueado simplesmente é repassado para o próximo da fila - não há **contabilidade** do fato de que as mesmas três pessoas não-observantes agora cobrem toda sexta à noite do ano.
 - O boundary de indisponibilidade é digitado como uma hora de relógio ("18:00") que está **errada na maior parte do ano** e errada para quem viaja.
 
 `shomer-oncall` trata a observância como uma **constraint de primeira classe do domínio**, deriva os boundaries a partir de primeiros princípios e torna o trade-off de fairness resultante **visível e auditável** em vez de escondido.
@@ -54,13 +54,13 @@ Schedulers de plantão (PagerDuty, Opsgenie, Grafana OnCall) modelam "estou indi
 ## O que não é
 
 - **Não** é um sistema de paging. Ele produz um schedule; você alimenta esse schedule no seu pager existente (adapters de export para PagerDuty/Opsgenie/iCal estão no [roadmap](docs/ROADMAP.md)).
-- **Não** é uma autoridade haláchica. Ele calcula *zmanim* de uso comum com opiniões configuráveis (*shitot*) e documenta exatamente qual fórmula usa (ver [DOMAIN.md](docs/DOMAIN.md#5-opiniões-de-zmanim-shitot)). O *psak* da sua comunidade vence — a opinião é um parâmetro, não um hard-code.
+- **Não** é uma autoridade haláchica. Ele calcula *zmanim* de uso comum com opiniões configuráveis (*shitot*) e documenta exatamente qual fórmula usa (ver [DOMAIN.md](docs/DOMAIN.md#5-opiniões-de-zmanim-shitot)). O *psak* da sua comunidade vence - a opinião é um parâmetro, não um hard-code.
 - **Não** faz phone-home, não exige conta e não precisa de credenciais de nuvem. É uma computação local determinística.
 
 ## Início rápido
 
 ```bash
-# Requer Python 3.11+ — e nada mais. Zero dependências de runtime.
+# Requer Python 3.11+ - e nada mais. Zero dependências de runtime.
 pip install shomer-oncall            # ou rode do source: PYTHONPATH=src python -m shomer_oncall
 
 # Gera um schedule para o Q1 2026 a partir de um arquivo de time (locations ficam no arquivo)
@@ -145,7 +145,7 @@ Shifts uncovered         : 0
 (* = membro observante)
 ```
 
-Note que `rivka` e `dan` (os observantes) carregam **a mesma weighted load que `sam`**, mesmo pegando zero shifts de sexta à noite/sábado — o allocator os compensou em slots de dia de semana e domingo. Esse equilíbrio é o ponto central, e é [medido](docs/METRICS.md), não afirmado.
+Note que `rivka` e `dan` (os observantes) carregam **a mesma weighted load que `sam`**, mesmo pegando zero shifts de sexta à noite/sábado - o allocator os compensou em slots de dia de semana e domingo. Esse equilíbrio é o ponto central, e é [medido](docs/METRICS.md), não afirmado.
 
 ## Mapa da documentação
 
@@ -161,11 +161,11 @@ Note que `rivka` e `dan` (os observantes) carregam **a mesma weighted load que `
 | [docs/SECURITY.md](docs/SECURITY.md) | Threat model, tratamento de dados, supply chain |
 | [docs/GLOSSARY.md](docs/GLOSSARY.md) | Todo termo de domínio, definido uma vez |
 | [docs/ROADMAP.md](docs/ROADMAP.md) | O que vem a seguir e o que está explicitamente fora de escopo |
-| [docs/adr/](docs/adr/) | Architecture Decision Records — o *porquê*, não só o *o quê* |
+| [docs/adr/](docs/adr/) | Architecture Decision Records - o *porquê*, não só o *o quê* |
 
 ## Princípios de design
 
-1. **Determinismo é feature.** Mesmos inputs → saída byte-idêntica. É um contrato testável, não uma aspiração. Ver o [contrato de determinismo](docs/TESTING.md#contrato-de-determinismo).
+1. **Determinismo é feature.** Mesmos inputs → saída byte-idêntica. É um contrato testável, não uma aspiração. Ver o [contrato de determinismo](docs/TESTING.md#4-contrato-de-determinismo).
 2. **Todo boundary é explicável.** `explain-boundary` mostra o evento solar, a *shitah*, o buffer e o instant UTC resultante. Sem números mágicos.
 3. **Fairness é definida, depois medida.** "Parece justo" não é métrica. Comprometemo-nos com uma função objetivo e reportamos contra ela.
 4. **A opinião haláchica é um parâmetro.** O engine traz defaults mas nunca hard-coda um *psak*.

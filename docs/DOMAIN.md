@@ -2,7 +2,7 @@
 
 > O conhecimento de calendário hebraico e de *zmanim* que este sistema codifica,
 > declarado com precisão suficiente para implementar e para discutir. Onde uma
-> regra tem múltiplas opiniões válidas, isso é apontado explicitamente — a
+> regra tem múltiplas opiniões válidas, isso é apontado explicitamente - a
 > ferramenta toma a opinião como parâmetro, nunca como hard-code
 > ([ADR-0003](adr/0003-shitah-como-parametro.md)).
 
@@ -26,7 +26,7 @@ festival). Esses períodos não são janelas semanais fixas de relógio:
 
 - Suas **datas de calendário** vêm do **calendário hebraico (lunisolar)**, que
   deriva contra o gregoriano e insere um mês bissexto em 7 de cada 19 anos.
-- Seus **instants de início e fim** são **astronômicos** — atrelados ao pôr do sol
+- Seus **instants de início e fim** são **astronômicos** - atrelados ao pôr do sol
   e ao anoitecer na location exata do observador, que variam por data, latitude,
   longitude e elevação.
 
@@ -35,10 +35,10 @@ Então o domínio tem dois subproblemas: *quais dias* são restritos (calendári
 
 ## 2. O calendário hebraico (o que o código precisa saber)
 
-O sistema não reimplementa o calendário via terceiros — implementa a aritmética de
+O sistema não reimplementa o calendário via terceiros - implementa a aritmética de
 Hillel em `hebrew.py`. Mas precisa modelar corretamente estes fatos:
 
-- **Lunisolar.** Os meses seguem a lua (29–30 dias); anos bissextos adicionam um 13º
+- **Lunisolar.** Os meses seguem a lua (29-30 dias); anos bissextos adicionam um 13º
   mês (*Adar I*) para re-sincronizar com o ano solar. É por isso que uma data
   hebraica cai em uma data gregoriana diferente a cada ano.
 - **O dia começa no pôr do sol.** O dia hebraico é **noite → manhã → tarde**. Uma
@@ -56,9 +56,9 @@ As categorias que a ferramenta reconhece, cada uma configurável por membro via
 | Categoria | Chave | Notas |
 |---|---|---|
 | Shabbat | `shabbat` | Todo pôr do sol de sexta → anoitecer de sábado. O caso de alta frequência. |
-| Festivais maiores (Yom Tov) | `yom_tov` | Rosh Hashanah, Yom Kippur, Sukkot (dia 1–2 + Shemini Atzeret/Simchat Torah), Pesach (primeiro e último dias), Shavuot. Restringem trabalho como Shabbat. |
+| Festivais maiores (Yom Tov) | `yom_tov` | Rosh Hashanah, Yom Kippur, Sukkot (dia 1-2 + Shemini Atzeret/Simchat Torah), Pesach (primeiro e último dias), Shavuot. Restringem trabalho como Shabbat. |
 | Chol HaMoed | `chol_hamoed` | Dias intermediários de festival. Trabalho muitas vezes *permitido*; **off por padrão**, opt-in. |
-| Fast days | `fasts` | Ex.: Tisha B'Av, Yom Kippur (também Yom Tov). Responder a um page geralmente é permitido; modelado como disponibilidade **soft** (deprioriza, não bloqueia) — off por padrão. |
+| Fast days | `fasts` | Ex.: Tisha B'Av, Yom Kippur (também Yom Tov). Responder a um page geralmente é permitido; modelado como disponibilidade **soft** (deprioriza, não bloqueia) - off por padrão. |
 
 Ponto de design: só `shabbat` e `yom_tov` bloqueiam por padrão, porque são as
 categorias com consenso amplo de que agir sobre um page não é permitido. Tudo mais
@@ -79,7 +79,7 @@ flowchart LR
     SS -. "restricted interval" .-> TZ
 ```
 
-- **Shkiah (sunset):** pôr do sol geométrico — o momento em que a borda superior do
+- **Shkiah (sunset):** pôr do sol geométrico - o momento em que a borda superior do
   sol cai abaixo do horizonte real, corrigido por refração atmosférica e pela
   **elevação** do observador (mais alto ⇒ pôr do sol mais tarde).
 - **Candle-lighting buffer:** por costume, entra-se no Shabbat *antes* do pôr do sol
@@ -114,7 +114,7 @@ que a escolha seja auditável.
 | `rt_72` | Rabbeinu Tam (72 min, sol 16.1°) | Mais stringent | Restricted interval mais longo. |
 
 Defaults: candle-lighting buffer `18 min`; nightfall `gra_8.5`. **São defaults, não
-doutrina** — ver [ADR-0003](adr/0003-shitah-como-parametro.md). O registry é o
+doutrina** - ver [ADR-0003](adr/0003-shitah-como-parametro.md). O registry é o
 *único* lugar onde as opiniões vivem; nenhum módulo downstream faz branch por string
 de *shitah*.
 
@@ -263,8 +263,8 @@ código e checadas por [property tests](TESTING.md#3-property-based-tests):
    reconstrói seus endpoints a partir de (evento solar, opinião, buffer, qualquer
    fallback).
 5. **Determinismo.** Inputs idênticos ⇒ `Schedule` idêntico (serialização
-   byte-idêntica). Ver o [contrato](TESTING.md#contrato-de-determinismo).
+   byte-idêntica). Ver o [contrato](TESTING.md#4-contrato-de-determinismo).
 
-Fairness deliberadamente **não** está nesta lista — é um *objetivo a otimizar* (ver
+Fairness deliberadamente **não** está nesta lista - é um *objetivo a otimizar* (ver
 [METRICS.md](METRICS.md)), não uma invariante. As invariantes acima são invioláveis;
 a fairness é maximizada sujeita a elas.

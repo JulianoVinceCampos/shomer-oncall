@@ -6,9 +6,9 @@
 
 - [1. Visão geral](#1-visão-geral)
 - [2. Atributos de qualidade](#2-atributos-de-qualidade-o-que-o-design-otimiza)
-- [3. C4 — Nível 1: Contexto de sistema](#3-c4--nível-1-contexto-de-sistema)
-- [4. C4 — Nível 2: Containers](#4-c4--nível-2-containers)
-- [5. C4 — Nível 3: Componentes (core)](#5-c4--nível-3-componentes-core)
+- [3. C4 Nível 1: Contexto de sistema](#3-c4-nível-1-contexto-de-sistema)
+- [4. C4 Nível 2: Containers](#4-c4-nível-2-containers)
+- [5. C4 Nível 3: Componentes (core)](#5-c4-nível-3-componentes-core)
 - [6. O pipeline](#6-o-pipeline)
 - [7. Visão de runtime: gerando um schedule](#7-visão-de-runtime-gerando-um-schedule)
 - [8. Ciclo de vida do shift (state)](#8-ciclo-de-vida-do-shift-state)
@@ -23,12 +23,12 @@
 `shomer-oncall` é uma **computação batch determinística**, não um serviço. Recebe
 uma definição de time e um intervalo de datas, e produz um schedule mais relatórios.
 Não há banco de dados, nem daemon scheduler, nem dependência de rede em runtime. É
-uma escolha deliberada — torna a ferramenta trivialmente testável, auditável e
+uma escolha deliberada - torna a ferramenta trivialmente testável, auditável e
 embutível em CI (ver [ADR-0005](adr/0005-batch-stateless-vs-servico.md)).
 
 A arquitetura é um **pipeline de funções puras** envolto por um shell fino de I/O
 (o padrão *functional core, imperative shell*). Toda a incerteza de calendário/
-astronomia é empurrada para um único boundary — o calendar engine — e tudo
+astronomia é empurrada para um único boundary - o calendar engine - e tudo
 downstream opera sobre intervals simples, já resolvidos.
 
 ## 2. Atributos de qualidade (o que o design otimiza)
@@ -36,7 +36,7 @@ downstream opera sobre intervals simples, já resolvidos.
 | Prioridade | Atributo | Como a arquitetura o serve |
 |---|---|---|
 | 1 | **Corretude** | Fonte única de verdade para boundaries; opiniões são parâmetros explícitos; golden tests contra *zmanim* autoritativos. |
-| 2 | **Determinismo** | Core puro, clock injetado, sort keys estáveis, sem leitura de relógio de parede na lógica. Ver [contrato de determinismo](TESTING.md#contrato-de-determinismo). |
+| 2 | **Determinismo** | Core puro, clock injetado, sort keys estáveis, sem leitura de relógio de parede na lógica. Ver [contrato de determinismo](TESTING.md#4-contrato-de-determinismo). |
 | 3 | **Explicabilidade** | Todo boundary e toda atribuição carrega um rationale machine-readable (o audit trail). |
 | 4 | **Testabilidade** | O functional core não tem I/O; os adapters são substituíveis; fixtures fixam casos do mundo real. |
 | 5 | Portabilidade | Python puro, sem dependências de runtime; roda em qualquer lugar com Python, offline. |
@@ -46,11 +46,11 @@ Performance é intencionalmente baixa na lista: um trimestre de scheduling para 
 time de 20 pessoas são milhares de intervals, não milhões. Corretude compra mais
 que velocidade aqui.
 
-## 3. C4 — Nível 1: Contexto de sistema
+## 3. C4 Nível 1: Contexto de sistema
 
 ```mermaid
 C4Context
-    title Contexto de sistema — shomer-oncall
+    title Contexto de sistema - shomer-oncall
     Person(sre, "SRE / Team lead", "Define o time, a observância e a window; consome o schedule")
     System(shomer, "shomer-oncall", "Calcula uma rotação de plantão justa e ciente da observância")
     System_Ext(pager, "Plataforma de paging", "PagerDuty / Opsgenie / Grafana OnCall")
@@ -67,14 +67,14 @@ partir de primeiros princípios ([ADR-0002](adr/0002-zmanim-astronomico-vs-looku
 então não existe chamada ao vivo. O export para pager está tracejado por estar no
 [roadmap](ROADMAP.md), não entregue.
 
-## 4. C4 — Nível 2: Containers
+## 4. C4 Nível 2: Containers
 
 Como isto é um único processo CLI, os "containers" aqui são unidades lógicas de
 execução dentro de um binário, não serviços implantáveis.
 
 ```mermaid
 C4Container
-    title Visão de container — shomer-oncall (processo único)
+    title Visão de container - shomer-oncall (processo único)
     Person(sre, "SRE / Team lead")
 
     Container_Boundary(cli, "shomer-oncall (pacote Python)") {
@@ -96,11 +96,11 @@ Regra de fronteira: **o core nunca toca o filesystem, o relógio ou a rede.** Os
 adapters fazem tudo isso e entregam value objects simples ao core. É o que torna o
 core determinístico e unit-testável sem mocks.
 
-## 5. C4 — Nível 3: Componentes (core)
+## 5. C4 Nível 3: Componentes (core)
 
 ```mermaid
 C4Component
-    title Visão de componentes — Functional core
+    title Visão de componentes - Functional core
     Container_Boundary(core, "Functional core") {
         Component(calendar, "Calendar engine", "módulo", "Calendário hebraico + zmanim -> restricted intervals")
         Component(shitot, "Opinion registry", "módulo", "Shitot de zmanim nomeadas com citações")
@@ -175,8 +175,8 @@ flowchart TD
     CE --> AUD
 ```
 
-Se qualquer stage recebe inputs idênticos, produz saída idêntica — é a propriedade
-que os [testes de determinismo](TESTING.md#contrato-de-determinismo) travam.
+Se qualquer stage recebe inputs idênticos, produz saída idêntica - é a propriedade
+que os [testes de determinismo](TESTING.md#4-contrato-de-determinismo) travam.
 
 ## 7. Visão de runtime: gerando um schedule
 
@@ -293,7 +293,7 @@ pacotes do core (`calendar`, `scheduling`, `reporting`) nunca importam `cli` nem
 | Concern | Abordagem |
 |---|---|
 | **Tempo** | Um `Clock` é injetado nos adapters, nunca lido dentro do core. Todos os instants internos são UTC timezone-aware; hora local existe só nas bordas para exibição. Ver [ADR-0004](adr/0004-utc-interno-localizar-nas-bordas.md). |
-| **Config e opiniões** | Validadas uma vez no load (parsing estrito nos adapters). A *shitah* é resolvida para um objeto de cálculo concreto no opinion registry — sem branching por string downstream. |
+| **Config e opiniões** | Validadas uma vez no load (parsing estrito nos adapters). A *shitah* é resolvida para um objeto de cálculo concreto no opinion registry - sem branching por string downstream. |
 | **Erros** | Erros de domínio são tipados (`InfeasibleScheduleError`, `UnknownShitahError`) e mapeiam para exit codes distintos. Adapters traduzem; o core levanta. |
 | **Logging** | Saída de console mínima hoje; o **audit trail** (JSON machine-readable) é o registro autoritativo, e logging estruturado mais rico está no roadmap. Ver [OBSERVABILITY.md](OBSERVABILITY.md). |
 | **Determinismo** | Sort keys estáveis em todo lugar onde um set/dict é iterado para output; nenhuma ordem de `set` vaza no resultado; clock/seed injetados. |
@@ -302,7 +302,7 @@ pacotes do core (`calendar`, `scheduling`, `reporting`) nunca importam `cli` nem
 
 1. **Batch vs serviço.** Escolhemos uma ferramenta batch stateless. Não faz push de
    overrides ao vivo, mas é determinística, testável e CI-friendly. Se swaps em
-   tempo real virarem requisito, um serviço fino envolve o mesmo core — o core não
+   tempo real virarem requisito, um serviço fino envolve o mesmo core - o core não
    muda. ([ADR-0005](adr/0005-batch-stateless-vs-servico.md))
 2. **Otimização exata vs heurística.** O allocator entregue usa uma heurística
    determinística com objetivo documentado; um ILP exato é opcional, atrás de um

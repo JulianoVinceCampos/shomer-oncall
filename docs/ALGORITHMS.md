@@ -33,7 +33,7 @@
 
 ## 2. Cálculo de boundary
 
-Objetivo: para cada membro observante, produzir `R(m)` — uma lista canônica (sorted,
+Objetivo: para cada membro observante, produzir `R(m)` - uma lista canônica (sorted,
 merged, não-adjacente) de intervals UTC em que ele não pode ser paginado.
 
 ```mermaid
@@ -88,7 +88,7 @@ função merge_adjacent(intervals):                         # intervals ordenado
 **Notas de corretude**
 
 - `dias_hebraicos_sobrepondo` deve incluir o dia *anterior* a `W.start` se a noite
-  dele se estende para dentro de `W` — o dia hebraico começa no pôr do sol da
+  dele se estende para dentro de `W` - o dia hebraico começa no pôr do sol da
   véspera ([DOMAIN §2](DOMAIN.md#2-o-calendário-hebraico-o-que-o-código-precisa-saber)).
   A implementação faz padding de um dia de cada lado e clipa no fim.
 - `merge_adjacent` usa `≤` (não `<`) para que intervals que apenas *se tocam* (Yom
@@ -123,7 +123,7 @@ w(s) = base
 
 Por que ponderar? Porque "todo mundo fez 20 shifts" **não** é justo se três dessas
 pessoas fizeram todo fim de semana. A fairness tem que ser medida em *carga*, não em
-contagem — é o cerne do projeto, formalizado em [METRICS.md](METRICS.md#2-weighted-load).
+contagem - é o cerne do projeto, formalizado em [METRICS.md](METRICS.md#2-weighted-load).
 A base do weight é registrada em cada shift para o audit trail.
 
 ## 4. Feasibility
@@ -139,7 +139,7 @@ F ← { (m,s) : m ∈ M, s ∈ S, feasible(m,s) }
 ```
 
 **Feasibility é um hard filter.** Um par que falha aqui nunca pode ser atribuído,
-independente da pressão de fairness — isto garante a [Invariante 1](DOMAIN.md#9-invariantes).
+independente da pressão de fairness - isto garante a [Invariante 1](DOMAIN.md#9-invariantes).
 
 ## 5. Alocação
 
@@ -155,7 +155,7 @@ sujeito a    Σₘ x[m,s] = 1                    ∀ s ∈ S         # exactly-o
 onde         L(m) = Σ_s w(s)·x[m,s]
 ```
 
-Minimizar o spread max−min é uma formulação de **min–max fairness**.
+Minimizar o spread max−min é uma formulação de **min-max fairness**.
 
 ### Duas regimes de solução ([ADR-0006](adr/0006-estrategia-de-alocacao.md))
 
@@ -191,13 +191,13 @@ são excluídos dos slots de fim de semana, então o greedy joga esses para quem
 folga, e depois entrega os slots pesados de dia de semana (que os observantes *podem*
 pegar) a eles para equalizar. O local search polir o desbalanceamento residual.
 
-**Exact (opcional, `--regime exact`).** Resolve o ILP de min–max spread com um solver
+**Exact (opcional, `--regime exact`).** Resolve o ILP de min-max spread com um solver
 (ex. HiGHS) para um ótimo comprovável. Mantido atrás de um extra opcional para o
 install core permanecer sem dependências.
 
 **Determinismo.** Ambas as regimes são determinísticas: o greedy ordena com chaves de
 ordem total (`(−w, id)`, `(load, id)`) então não há ambiguidade de empate nem de
-iteração de set. Exigido pelo [contrato de determinismo](TESTING.md#contrato-de-determinismo).
+iteração de set. Exigido pelo [contrato de determinismo](TESTING.md#4-contrato-de-determinismo).
 
 ### Carry-in de histórico
 
@@ -207,7 +207,7 @@ trimestre. A flag `--history` fornece as loads anteriores; ausente, `H(m) = 0`.
 
 ## 6. Tratando shifts uncoverable
 
-Um shift é *uncoverable* quando seu conjunto feasible é vazio — ex. um time todo
+Um shift é *uncoverable* quando seu conjunto feasible é vazio - ex. um time todo
 observante num Yom Tov de 2 dias na diaspora. A ferramenta **não** inventa cobertura.
 Em ordem de prioridade, configurável:
 
@@ -216,7 +216,7 @@ Em ordem de prioridade, configurável:
 2. **Backup pool.** Se um roster `backup:` (ex. um time parceiro) estiver
    configurado, puxa dele e rotula a atribuição como `backup`.
 3. **Relaxamento de soft-restriction.** Se (e só se) o time optar, slots de `fasts` e
-   `chol_hamoed` podem ser preenchidos com um membro deprioritizado e sinalizado —
+   `chol_hamoed` podem ser preenchidos com um membro deprioritizado e sinalizado -
    nunca `shabbat`/`yom_tov`, que permanecem hard.
 
 Todo caminho é registrado no audit trail com sua razão, então um gap uncovered é uma
@@ -229,8 +229,8 @@ decisão visível, não um buraco silencioso.
 | Cálculo de boundary | `O(n · d · C)` | `O(n · d)` | `C` = um evento solar; `d` = dias |
 | Geração de shifts | `O(k)` | `O(k)` | |
 | Matriz de feasibility | `O(n · k · |R|)` | `O(|F|)` | |
-| Alocação — greedy+LS | `O(k log k + |F| + I·|F|)` | `O(|F|)` | `I` = iterações do local search |
-| Alocação — exact | ILP; ms–s para tamanhos no escopo | `O(|F|)` | HiGHS; ótimo |
+| Alocação - greedy+LS | `O(k log k + |F| + I·|F|)` | `O(|F|)` | `I` = iterações do local search |
+| Alocação - exact | ILP; ms-s para tamanhos no escopo | `O(|F|)` | HiGHS; ótimo |
 | Metrics | `O(n + k)` | `O(n)` | |
 
 Para um time de 20 pessoas numa rotação diária de 90 dias: `n=20`, `d≈90`, `k≈90`,
@@ -259,7 +259,7 @@ do sol) e `s6` (Sáb). Peso total = 9.0; share igual = 2.25 cada.
 Atribuição ótima (min spread): `alex`←s5, `sam`←s6, `rivka`←s1+s3, `dan`←s2+s4, e o
 shift ímpar de domingo `s7` vai para `rivka` (tie-break determinístico) → loads
 `alex 2.0, sam 2.0, rivka 3.0, dan 2.0`, spread `1.0`. Os observantes `rivka`/`dan`
-carregam `3.0`/`2.0` apesar de pegarem **zero** shifts de fim de semana — as loads de
+carregam `3.0`/`2.0` apesar de pegarem **zero** shifts de fim de semana - as loads de
 dia de semana os equilibraram contra o plantão de fim de semana dos não-observantes.
 É o objetivo de fairness fazendo o seu trabalho, e [METRICS.md](METRICS.md) mostra
 como é pontuado.

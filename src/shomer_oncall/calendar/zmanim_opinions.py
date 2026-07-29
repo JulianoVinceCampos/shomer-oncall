@@ -3,7 +3,7 @@
 Cada opinião define como *tzais* (nightfall) é computado, mais uma citação. A
 opinião é um parâmetro, nunca hard-coded downstream (docs/adr/0003). Este módulo é
 o único lugar onde as opiniões vivem; o engine resolve um nome para uma Opinion e
-a usa — sem branching por string em nenhum outro lugar.
+a usa - sem branching por string em nenhum outro lugar.
 """
 
 from __future__ import annotations

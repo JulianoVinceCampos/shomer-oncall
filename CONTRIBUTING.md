@@ -9,7 +9,7 @@ determinismo e raciocínio documentado**. Algumas normas mantêm isso.
    scheduling deve manter o [contrato de determinismo](docs/TESTING.md#4-contrato-de-determinismo)
    verde. Se sua mudança é inerentemente não-determinística, é a mudança errada.
 2. **Opiniões haláchicas são parâmetros, nunca hard-codes.** Se precisar de uma nova
-   opinião de *zmanim*, adicione-a ao opinion registry com uma citação — não faça
+   opinião de *zmanim*, adicione-a ao opinion registry com uma citação - não faça
    branch por ela no allocator.
 3. **Todo boundary deve permanecer explicável.** Se você mexer no calendar engine, a
    saída do `explain-boundary` deve continuar dando conta do instant calculado.

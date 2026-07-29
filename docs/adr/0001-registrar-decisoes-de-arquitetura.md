@@ -16,7 +16,7 @@ decisões e do seu rationale, que viva junto do código.
 
 Usamos **Architecture Decision Records** (formato de Michael Nygard) guardados em
 `docs/adr/`, numerados sequencialmente, imutáveis uma vez aceitos. Uma decisão é
-alterada adicionando um novo ADR que substitui o antigo — nunca editando o histórico.
+alterada adicionando um novo ADR que substitui o antigo - nunca editando o histórico.
 
 Cada ADR declara: contexto, a decisão e as consequências (boas e ruins). Uma decisão
 por arquivo. Escolhas de design não-triviais em PRs devem chegar com um ADR

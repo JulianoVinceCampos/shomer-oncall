@@ -10,7 +10,7 @@ e este projeto adere ao [Versionamento Semântico](https://semver.org/lang/pt-BR
 ### Adicionado
 - Conjunto completo de documentação (em PT-BR, termos técnicos em inglês):
   arquitetura, domain model, algoritmos, métricas, observabilidade, estratégia de
-  testes e ADRs 0001–0006, com diagramas Mermaid (C4, sequência, state machine,
+  testes e ADRs 0001-0006, com diagramas Mermaid (C4, sequência, state machine,
   flowchart de boundary, ERD).
 - **Implementação funcional, zero dependências de runtime:**
   - Calendário hebraico (aritmética de Hillel) e *zmanim* solares (modelo NOAA)
@@ -24,7 +24,7 @@ e este projeto adere ao [Versionamento Semântico](https://semver.org/lang/pt-BR
     documentados; exporters iCal + JSON canônico.
 - Suíte de testes: 77 testes (unit, golden anchors de calendário, property tests via
   Hypothesis, contrato de determinismo, e2e de CLI) com ~96% de coverage; ruff +
-  mypy-strict limpos; CI GitHub Actions em Python 3.11–3.13.
+  mypy-strict limpos; CI GitHub Actions em Python 3.11-3.13.
 
 ### Notas
 - O install de runtime requer apenas Python 3.11+. Extras opcionais: `yaml` (arquivos

@@ -1,7 +1,7 @@
 """Serialização JSON determinística do schedule, audit trail e métricas.
 
 Saída estável (keys ordenadas, arredondamento de float fixo, quebras "\n") para que
-inputs idênticos gerem arquivos byte-idênticos — o determinism contract
+inputs idênticos gerem arquivos byte-idênticos - o determinism contract
 (docs/TESTING.md#determinism-contract).
 """
 

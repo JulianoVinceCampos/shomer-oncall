@@ -1,6 +1,6 @@
 # Observabilidade
 
-> Uma ferramenta batch ainda precisa ser observável — não por uptime, mas por
+> Uma ferramenta batch ainda precisa ser observável - não por uptime, mas por
 > **auditabilidade e debuggability**. Quando um boundary parece errado ou um schedule
 > parece injusto, você precisa ser capaz de reconstruir exatamente o porquê. Este
 > documento define os três sinais (logs, métricas, audit trail) e como se encaixam.
@@ -39,7 +39,7 @@ flowchart LR
 > Nota de implementação: o build atual emite o **audit trail** e o **metrics JSON**
 > (ambos autoritativos e machine-readable) mais um scorecard de console humano.
 > Logging estruturado rico (`structlog`, níveis abaixo) é o alvo descrito aqui,
-> tracked no [roadmap](ROADMAP.md) — o audit trail é deliberadamente a fonte de
+> tracked no [roadmap](ROADMAP.md) - o audit trail é deliberadamente a fonte de
 > verdade, não os logs.
 
 ## 2. Audit trail
@@ -47,7 +47,7 @@ flowchart LR
 Emitido junto a cada schedule como `schedule.audit.json`. Registra **por que cada
 decisão foi tomada**, não só o quê. Dois tipos de record:
 
-**Boundary rationale** — um por restricted interval:
+**Boundary rationale** - um por restricted interval:
 
 ```json
 {
@@ -65,7 +65,7 @@ decisão foi tomada**, não só o quê. Dois tipos de record:
 }
 ```
 
-**Assignment rationale** — um por shift atribuído:
+**Assignment rationale** - um por shift atribuído:
 
 ```json
 {
@@ -104,7 +104,7 @@ compartilha um `run_id` (hash dos inputs + versão) determinístico.
 
 ## 4. Emissão de métricas
 
-Todo run escreve `schedule.metrics.json` — a forma máquina do
+Todo run escreve `schedule.metrics.json` - a forma máquina do
 [scorecard](METRICS.md#8-scorecard-resolvido):
 
 ```json
@@ -116,7 +116,7 @@ Todo run escreve `schedule.metrics.json` — a forma máquina do
 }
 ```
 
-É o que um job de CI ou um dashboard de longo horizonte consome — dá para acompanhar
+É o que um job de CI ou um dashboard de longo horizonte consome - dá para acompanhar
 a fairness ao longo dos trimestres coletando esses arquivos. Todas as definições de
 métrica estão em [METRICS.md](METRICS.md); isto é apenas a serialização delas.
 
@@ -133,15 +133,15 @@ Mesmo offline, os enquadramentos clássicos mapeiam de forma limpa e tornam a
 ferramenta legível para SREs:
 
 **RED** (tratando um run como um "request"):
-- **Rate** — runs por dia (em CI, PRs que mexem no roster).
-- **Errors** — exits diferentes de zero, por código (2/3/4/5).
-- **Duration** — latência de geração ([budget](METRICS.md#6-métricas-de-performance)).
+- **Rate** - runs por dia (em CI, PRs que mexem no roster).
+- **Errors** - exits diferentes de zero, por código (2/3/4/5).
+- **Duration** - latência de geração ([budget](METRICS.md#6-métricas-de-performance)).
 
 **USE** (o solver como o recurso restrito):
-- **Utilization** — tempo de solver / tempo total do run.
-- **Saturation** — houve fallback de exact para heurística? (a virada de regime é o
+- **Utilization** - tempo de solver / tempo total do run.
+- **Saturation** - houve fallback de exact para heurística? (a virada de regime é o
   sinal de "profundidade de fila").
-- **Errors** — inviabilidade / timeout do solver.
+- **Errors** - inviabilidade / timeout do solver.
 
 ## 7. Dashboards e superfície em CI
 

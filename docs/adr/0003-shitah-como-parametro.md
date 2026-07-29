@@ -6,7 +6,7 @@
 
 ## Contexto
 
-A definição de *tzais* (nightfall) — e, em menor grau, o candle-lighting buffer —
+A definição de *tzais* (nightfall) - e, em menor grau, o candle-lighting buffer -
 varia entre autoridades haláchicas (*poskim*). Um depression angle de 8.5°, 16.1°, ou
 um fixo de 40/72 minutos são todos válidos dependendo do *psak* que uma comunidade
 segue ([DOMAIN §5](../DOMAIN.md#5-opiniões-de-zmanim-shitot)). Uma ferramenta que
@@ -29,7 +29,7 @@ estritamente como defaults, documentados como tal.
 **Bom**
 - A ferramenta nunca impõe um *psak*; a decisão da comunidade é o input. É o único
   design honesto para um domínio de observância religiosa.
-- Adicionar uma opinião é uma entrada de registry com citação — sem mudança de lógica,
+- Adicionar uma opinião é uma entrada de registry com citação - sem mudança de lógica,
   sem risco ao allocator.
 - Boundaries permanecem auditáveis: a opinião escolhida faz parte de todo rationale.
 - A monotonicidade de *tzais* entre opiniões é [property-tested](../TESTING.md#3-property-based-tests).
@@ -37,7 +37,7 @@ estritamente como defaults, documentados como tal.
 **Ruim / custo**
 - Mais superfície de configuração; um time precisa conhecer sua *shitah* (mitigado por
   defaults e, no [roadmap](../ROADMAP.md#questões-em-aberto), herança a nível de time).
-- O registry precisa ser curado com cuidado — uma citação errada é um bug de domínio.
+- O registry precisa ser curado com cuidado - uma citação errada é um bug de domínio.
 
 ## Alternativas consideradas
 

@@ -2,7 +2,7 @@
 
 Dado um ano hebraico, produz o conjunto de dias restritos (como datas fixas RD)
 com o seu kind, honrando a regra de festival de dois dias na diaspora. Festivais
-que não têm restrição de trabalho (Purim, Chanukah) estão ausentes de propósito —
+que não têm restrição de trabalho (Purim, Chanukah) estão ausentes de propósito -
 nunca bloqueiam o plantão (docs/DOMAIN.md#3).
 
 Números de mês: Nisan=1, Sivan=3, Av=5, Tishri=7 (ver hebrew.py).

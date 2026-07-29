@@ -9,7 +9,7 @@
 O sistema abrange membros em fusos diferentes, calcula eventos solares atrelados ao
 tempo solar local, e precisa sobreviver a transições de DST que podem ocorrer
 *dentro* de um restricted interval
-([DOMAIN edge cases 6–7](../DOMAIN.md#7-edge-cases-que-o-modelo-precisa-sobreviver)).
+([DOMAIN edge cases 6-7](../DOMAIN.md#7-edge-cases-que-o-modelo-precisa-sobreviver)).
 Misturar tempo de relógio local pelo core é o caminho clássico para bugs de errar por
 uma hora e para saída não-reproduzível entre máquinas com locales diferentes.
 
@@ -29,7 +29,7 @@ uma hora e para saída não-reproduzível entre máquinas com locales diferentes
 **Bom**
 - Transições de DST dentro de um interval são um não-evento: UTC é monotônico, então a
   matemática do interval não é afetada; só a *exibição* localizada reflete o salto.
-- Times cross-timezone são tratados naturalmente — o interval de cada membro é
+- Times cross-timezone são tratados naturalmente - o interval de cada membro é
   calculado na sua location e comparado num frame comum.
 - Sustenta o [contrato de determinismo](../TESTING.md#4-contrato-de-determinismo): sem
   vazamento de locale de máquina ou relógio ambiente no resultado.
@@ -39,7 +39,7 @@ uma hora e para saída não-reproduzível entre máquinas com locales diferentes
   manter UTC internamente. Forçado em review e pelos testes de determinismo (que rodam
   com clock congelado e exporiam um `now()` perdido).
 - A saída voltada a humanos exige um passo explícito de localização; uma localização
-  esquecida mostra UTC ao usuário (um bug visível e inofensivo — muito melhor que um
+  esquecida mostra UTC ao usuário (um bug visível e inofensivo - muito melhor que um
   boundary com hora errada em silêncio).
 
 ## Alternativas consideradas

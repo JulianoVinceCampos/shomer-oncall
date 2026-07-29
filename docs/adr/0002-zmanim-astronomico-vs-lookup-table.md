@@ -11,9 +11,9 @@ que são funções de data, latitude, longitude, **elevação** e refração atm
 ([DOMAIN §4](../DOMAIN.md#4-zmanim-transformando-um-dia-em-instants)). Duas formas de
 obtê-los:
 
-1. **Lookup table** — enviar tempos de candle-lighting/nightfall pré-computados por
+1. **Lookup table** - enviar tempos de candle-lighting/nightfall pré-computados por
    cidade.
-2. **Cálculo astronômico** — derivar de um modelo solar em tempo de execução.
+2. **Cálculo astronômico** - derivar de um modelo solar em tempo de execução.
 
 Lookup tables são simples mas carregam suposições escondidas: uma elevação chumbada,
 um modelo de refração, uma *shitah*, um conjunto fixo de cidades e um horizonte de
@@ -27,7 +27,7 @@ princípios em Python puro** (o modelo solar padrão "sunrise equation", estilo 
 parametrizado pela location exata do membro (incluindo elevação, via a correção de
 horizon dip) e pela *shitah* escolhida. Nenhum boundary é lido de uma tabela estática
 por cidade, e nenhuma biblioteca de astronomia/calendário de terceiros é exigida em
-runtime — o calendário hebraico também é implementado in-house (aritmética de Hillel).
+runtime - o calendário hebraico também é implementado in-house (aritmética de Hillel).
 É o que torna a ferramenta zero-dependency, offline e determinística; a corretude é
 garantida não por confiar numa biblioteca, mas por golden tests contra fontes
 autoritativas.

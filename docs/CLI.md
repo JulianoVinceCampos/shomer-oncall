@@ -42,7 +42,7 @@ shomer-oncall schedule \
 ## explain-boundary
 
 Mostra exatamente como um boundary de Shabbat/Yom Tov foi calculado. É a ferramenta
-de transparência — sem números mágicos.
+de transparência - sem números mágicos.
 
 ```bash
 shomer-oncall explain-boundary \
@@ -102,9 +102,9 @@ Asia/Jerusalem:31.78:35.22:754
 Europe/London:51.51:-0.13:35
 ```
 
-- `TZ` — timezone IANA (usado para exibição e DST; a matemática interna é UTC).
-- `lat` / `lon` — graus decimais, sul/oeste negativos.
-- `elevation_m` — metros acima do nível do mar; **obrigatório** porque desloca
+- `TZ` - timezone IANA (usado para exibição e DST; a matemática interna é UTC).
+- `lat` / `lon` - graus decimais, sul/oeste negativos.
+- `elevation_m` - metros acima do nível do mar; **obrigatório** porque desloca
   materialmente o sunset ([DOMAIN §4](DOMAIN.md#por-que-elevação-e-refração-importam-e-por-que-uma-tabela-não-serve)).
 
 ## Exit codes

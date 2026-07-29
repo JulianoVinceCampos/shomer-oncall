@@ -30,7 +30,7 @@ flowchart TD
     U --> G --> P --> I --> E
 ```
 
-A base é larga porque o core são funções puras — baratas de testar exaustivamente.
+A base é larga porque o core são funções puras - baratas de testar exaustivamente.
 Golden e property ficam logo acima do unit porque é onde a corretude de domínio de
 fato vive.
 
@@ -44,7 +44,7 @@ RH 5786 = 2025-09-23; o modelo solar é validado por faixas de plausibilidade (e
 sunset de Jerusalém no verão em torno de 16:48 UTC) para pegar regressões grosseiras.
 
 **Regra:** fixtures nunca são regeneradas a partir da nossa própria saída. Se a
-ferramenta e uma fixture divergem, alguém lê a fonte e decide quem está errado — a
+ferramenta e uma fixture divergem, alguém lê a fonte e decide quem está errado - a
 fixture é culpada até prova em contrário, mas o código também. Ver
 [CONTRIBUTING](../CONTRIBUTING.md#reportando-bugs-de-domínio).
 
@@ -56,7 +56,7 @@ deve valer para *todo* caso gerado.
 
 | Property | Enunciado |
 |---|---|
-| **Nenhuma violação** | Para qualquer time/window, nenhum par atribuído `(m,s)` intersecta qualquer interval em `R(m)`. (A invariante de segurança — o teste mais importante do repo.) |
+| **Nenhuma violação** | Para qualquer time/window, nenhum par atribuído `(m,s)` intersecta qualquer interval em `R(m)`. (A invariante de segurança - o teste mais importante do repo.) |
 | **Coverage-or-fail** | Todo shift é atribuído exatamente uma vez, ou reportado uncovered com exit ≠ 0. Nunca descartado em silêncio. |
 | **Canonicidade de interval** | `R(m)` está sempre sorted, não-sobreposto, não-adjacente após o merge. |
 | **tzais monotônico** | Para (location, data) fixos, uma opinião mais stringent gera um `tzais` nunca mais cedo. |
@@ -64,7 +64,7 @@ deve valer para *todo* caso gerado.
 | **Fairness ≥ baseline** | O Jain index do allocator é sempre ≥ o de um round-robin ingênuo no mesmo conjunto feasible (nunca piora a fairness). |
 
 Os generators têm seed e encolhem para contra-exemplos mínimos, então uma falha
-reporta o menor time/data que quebra a property — que geralmente *é* o bug report.
+reporta o menor time/data que quebra a property - que geralmente *é* o bug report.
 
 ## 4. Contrato de determinismo
 
@@ -88,7 +88,7 @@ saída.
 
 ## 5. Unit e integração
 
-- **Unit:** toda função pura — `merge_adjacent`, `feasible`, cálculo de weight, cada
+- **Unit:** toda função pura - `merge_adjacent`, `feasible`, cálculo de weight, cada
   fórmula de métrica (checada contra valores calculados à mão de [METRICS](METRICS.md)).
 - **Integração:** liga os stages reais (calendar → generator → feasibility →
   allocator) sem o CLI shell; afirma properties de estado final em times pequenos
@@ -127,7 +127,7 @@ A CI roda a matriz em Python 3.11, 3.12 e 3.13.
   o calendário e a astronomia são in-house e validados por golden fixtures contra
   autoridades independentes.
 - **Micro-benchmarks como pass/fail.** Performance tem budgets ([METRICS §6](METRICS.md#6-métricas-de-performance))
-  reportados em CI, mas um run lento é `warning`, não build vermelho — corretude
+  reportados em CI, mas um run lento é `warning`, não build vermelho - corretude
   nunca fica refém de um threshold de tempo ruidoso.
 - **A plataforma de paging.** Os adapters de export são testados por formato de saída
   válido; o pager downstream está fora de escopo ([ROADMAP](ROADMAP.md)).

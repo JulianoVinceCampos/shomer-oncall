@@ -26,15 +26,15 @@ não mantido internamente.
 ## Consequências
 
 **Bom**
-- **Determinismo é alcançável** — uma função pura dos seus inputs, sem estado de
+- **Determinismo é alcançável** - uma função pura dos seus inputs, sem estado de
   servidor escondido para perturbar a saída.
-- **Trivialmente testável** — sem fixtures de DB, sem harness de serviço; a ferramenta
+- **Trivialmente testável** - sem fixtures de DB, sem harness de serviço; a ferramenta
   inteira é `run(inputs) -> outputs`.
-- **Nativa de CI** — encaixa num pipeline como gate com [exit codes](../CLI.md#exit-codes)
+- **Nativa de CI** - encaixa num pipeline como gate com [exit codes](../CLI.md#exit-codes)
   significativos; um PR de roster pode ser checado por fairness antes do merge.
-- **Superfície de ataque mínima** — nada para autenticar, nada escutando
+- **Superfície de ataque mínima** - nada para autenticar, nada escutando
   ([SECURITY](../SECURITY.md#1-threat-model)).
-- **Auditável** — todo run emite um audit trail autocontido.
+- **Auditável** - todo run emite um audit trail autocontido.
 
 **Ruim / custo**
 - Sem overrides ao vivo ou swaps em tempo real. Um "estou doente, me troca" no mesmo
@@ -46,7 +46,7 @@ não mantido internamente.
 ## Reversibilidade
 
 Esta decisão é **barata de revisitar**: como toda a lógica vive no core puro, um
-serviço futuro seria um shell fino em volta das mesmas funções — o core não mudaria.
+serviço futuro seria um shell fino em volta das mesmas funções - o core não mudaria.
 Essa assimetria (batch agora, serviço depois se justificado) é por que batch é o ponto
 de partida certo. A demanda por swap ao vivo está tracked no
 [roadmap](../ROADMAP.md#fora-de-escopo-de-propósito) como explicitamente fora de

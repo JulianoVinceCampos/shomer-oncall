@@ -1,6 +1,6 @@
 # Segurança e tratamento de dados
 
-> Uma ferramenta batch local e offline tem uma superfície de ataque pequena — mas
+> Uma ferramenta batch local e offline tem uma superfície de ataque pequena - mas
 > "pequena" não é "nenhuma", e ser explícito sobre isso faz parte de ser profissional.
 > Este documento declara o threat model, quais dados a ferramenta toca e a postura de
 > supply chain.
@@ -22,7 +22,7 @@ Escopo, declarado com clareza para as fronteiras ficarem nítidas.
 | **Roda onde** | Na máquina do próprio operador ou num runner de CI. Sem servidor, sem listener, sem superfície de entrada. |
 | **Rede** | Nenhuma em runtime. Sem telemetria, sem license check, sem ping de update. O modelo solar é in-house. |
 | **Privilégio** | Roda como usuário sem privilégio; lê um JSON, escreve alguns arquivos no diretório de trabalho. |
-| **Trust boundary** | O JSON de time e a config são *input confiável* fornecido pelo operador. A ferramenta não se defende de um operador malicioso agendando o próprio time — não é uma ameaça relevante. |
+| **Trust boundary** | O JSON de time e a config são *input confiável* fornecido pelo operador. A ferramenta não se defende de um operador malicioso agendando o próprio time - não é uma ameaça relevante. |
 
 ```mermaid
 flowchart LR
@@ -36,7 +36,7 @@ flowchart LR
     style net stroke-dasharray: 4 4
 ```
 
-As ameaças realistas **não** são atacantes — são (a) um arquivo de time
+As ameaças realistas **não** são atacantes - são (a) um arquivo de time
 malformado/não-confiável causando crash ou exaustão de recursos, e (b) risco de
 supply chain nas dependências. Ambos endereçados abaixo.
 
@@ -52,10 +52,10 @@ supply chain nas dependências. Ambos endereçados abaixo.
   - A observância fica no arquivo de time controlado pelo operador; a ferramenta
     nunca a transmite para lugar nenhum.
   - Logs e o audit trail referenciam o *efeito* (restricted intervals) e o member id,
-    que o operador já detém — ver [OBSERVABILITY §3](OBSERVABILITY.md#3-logs-estruturados).
+    que o operador já detém - ver [OBSERVABILITY §3](OBSERVABILITY.md#3-logs-estruturados).
   - Recomendação nas docs: tratar `team.json` como confidencial e mantê-lo fora de
     repos world-readable. Um membro pode preferir declarar só `observes: [shabbat]`
-    sem mais detalhe — o schema permite divulgação mínima.
+    sem mais detalhe - o schema permite divulgação mínima.
 - **Locations são grossas por design.** Precisão a nível de cidade basta para
   *zmanim*; a ferramenta não precisa nem quer endereços residenciais.
 - **Arquivos de saída** (`*.ics`, `*.audit.json`, `*.metrics.json`) herdam a mesma
@@ -84,12 +84,12 @@ hash committado fica vermelho.
 Todo input externo é validado na fronteira do adapter antes de chegar ao core
 ([ARCHITECTURE §10](ARCHITECTURE.md#10-cross-cutting-concerns)):
 
-- **Schema** — os models rejeitam campos desconhecidos, tipos errados, lat/lon fora
+- **Schema** - os models rejeitam campos desconhecidos, tipos errados, lat/lon fora
   de faixa e categorias `observes` desconhecidas.
-- **Shitah** — deve resolver no opinion registry; desconhecida ⇒ exit `5`, nunca um
+- **Shitah** - deve resolver no opinion registry; desconhecida ⇒ exit `5`, nunca um
   default silencioso.
-- **Window** — `from ≤ to`; ranges absurdos são rejeitados para limitar compute.
-- **Location** — parseada estritamente; elevação obrigatória.
+- **Window** - `from ≤ to`; ranges absurdos são rejeitados para limitar compute.
+- **Location** - parseada estritamente; elevação obrigatória.
 
 Como o core é puro e opera sobre value objects validados, não há superfície de
 injeção (sem SQL, sem shell-out, sem eval de template, sem `pickle`).

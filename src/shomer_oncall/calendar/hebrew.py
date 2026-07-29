@@ -3,7 +3,7 @@
 Implementa a representação em dia fixo ("Rata Die", RD) e as conversões entre o
 calendário gregoriano proléptico e o calendário hebraico aritmético, seguindo os
 algoritmos de Dershowitz & Reingold, *Calendrical Calculations*. Sem dependências
-de terceiros — este é o calendar authority em que o resto do sistema confia, e é
+de terceiros - este é o calendar authority em que o resto do sistema confia, e é
 validado contra anchors conhecidas na golden test suite.
 
 Numeração dos meses (hebraico): Nisan=1, Iyar=2, Sivan=3, Tammuz=4, Av=5, Elul=6,
