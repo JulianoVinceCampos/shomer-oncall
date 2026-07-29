@@ -1,0 +1,32 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.11", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Configura Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Instala (apenas dev extras; zero deps de runtime)
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+      - name: Lint
+        run: ruff check .
+      - name: Types
+        run: mypy src
+      - name: Testes + gate de coverage (>= 95%)
+        run: pytest --cov=src/shomer_oncall --cov-report=term-missing --cov-fail-under=95
+      - name: Suites property + determinism + golden
+        run: pytest -m "property or determinism or golden" -q
