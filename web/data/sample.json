@@ -1,0 +1,1888 @@
+{
+  "assignments": [
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "dan(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 12.0,
+      "member": "rivka",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-01-01"
+    },
+    {
+      "alternatives": [
+        "sam(load 32.00)"
+      ],
+      "load_after": 33.0,
+      "load_before": 0.0,
+      "member": "alex",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-01-02"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 0.0,
+      "member": "sam",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-01-03"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "rivka(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 0.0,
+      "member": "dan",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-01-04"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "dan(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 13.0,
+      "member": "rivka",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-01-05"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "rivka(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 14.0,
+      "member": "dan",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-01-06"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "dan(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 14.0,
+      "member": "rivka",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-01-07"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "rivka(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 15.0,
+      "member": "dan",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-01-08"
+    },
+    {
+      "alternatives": [
+        "sam(load 32.00)"
+      ],
+      "load_after": 33.0,
+      "load_before": 2.0,
+      "member": "alex",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-01-09"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 2.0,
+      "member": "sam",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-01-10"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "dan(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 0.0,
+      "member": "rivka",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-01-11"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "dan(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 15.0,
+      "member": "rivka",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-01-12"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "rivka(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 16.0,
+      "member": "dan",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-01-13"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "dan(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 16.0,
+      "member": "rivka",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-01-14"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "rivka(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 17.0,
+      "member": "dan",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-01-15"
+    },
+    {
+      "alternatives": [
+        "sam(load 32.00)"
+      ],
+      "load_after": 33.0,
+      "load_before": 4.0,
+      "member": "alex",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-01-16"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 4.0,
+      "member": "sam",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-01-17"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "rivka(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 2.0,
+      "member": "dan",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-01-18"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "dan(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 17.0,
+      "member": "rivka",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-01-19"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "rivka(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 18.0,
+      "member": "dan",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-01-20"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "dan(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 18.0,
+      "member": "rivka",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-01-21"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "rivka(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 19.0,
+      "member": "dan",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-01-22"
+    },
+    {
+      "alternatives": [
+        "sam(load 32.00)"
+      ],
+      "load_after": 33.0,
+      "load_before": 6.0,
+      "member": "alex",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-01-23"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 6.0,
+      "member": "sam",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-01-24"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "dan(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 2.0,
+      "member": "rivka",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-01-25"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "dan(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 19.0,
+      "member": "rivka",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-01-26"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "rivka(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 20.0,
+      "member": "dan",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-01-27"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "dan(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 20.0,
+      "member": "rivka",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-01-28"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "rivka(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 21.0,
+      "member": "dan",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-01-29"
+    },
+    {
+      "alternatives": [
+        "sam(load 32.00)"
+      ],
+      "load_after": 33.0,
+      "load_before": 8.0,
+      "member": "alex",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-01-30"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 8.0,
+      "member": "sam",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-01-31"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "rivka(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 4.0,
+      "member": "dan",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-02-01"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "dan(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 21.0,
+      "member": "rivka",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-02-02"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "rivka(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 22.0,
+      "member": "dan",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-02-03"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "dan(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 22.0,
+      "member": "rivka",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-02-04"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "rivka(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 23.0,
+      "member": "dan",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-02-05"
+    },
+    {
+      "alternatives": [
+        "sam(load 32.00)"
+      ],
+      "load_after": 33.0,
+      "load_before": 10.0,
+      "member": "alex",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-02-06"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 10.0,
+      "member": "sam",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-02-07"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "dan(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 4.0,
+      "member": "rivka",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-02-08"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "dan(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 23.0,
+      "member": "rivka",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-02-09"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "rivka(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 24.0,
+      "member": "dan",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-02-10"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "dan(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 24.0,
+      "member": "rivka",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-02-11"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "rivka(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 25.0,
+      "member": "dan",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-02-12"
+    },
+    {
+      "alternatives": [
+        "sam(load 32.00)"
+      ],
+      "load_after": 33.0,
+      "load_before": 12.0,
+      "member": "alex",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-02-13"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 12.0,
+      "member": "sam",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-02-14"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "rivka(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 6.0,
+      "member": "dan",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-02-15"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "dan(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 25.0,
+      "member": "rivka",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-02-16"
+    },
+    {
+      "alternatives": [
+        "dan(load 32.00)",
+        "rivka(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 33.0,
+      "load_before": 26.0,
+      "member": "alex",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-02-17"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "rivka(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 26.0,
+      "member": "dan",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-02-18"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "dan(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 26.0,
+      "member": "rivka",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-02-19"
+    },
+    {
+      "alternatives": [
+        "sam(load 32.00)"
+      ],
+      "load_after": 33.0,
+      "load_before": 14.0,
+      "member": "alex",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-02-20"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 14.0,
+      "member": "sam",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-02-21"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "dan(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 6.0,
+      "member": "rivka",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-02-22"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "dan(load 32.00)",
+        "rivka(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 26.0,
+      "member": "sam",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-02-23"
+    },
+    {
+      "alternatives": [
+        "dan(load 32.00)",
+        "rivka(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 33.0,
+      "load_before": 27.0,
+      "member": "alex",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-02-24"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "rivka(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 27.0,
+      "member": "dan",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-02-25"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "dan(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 27.0,
+      "member": "rivka",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-02-26"
+    },
+    {
+      "alternatives": [
+        "sam(load 32.00)"
+      ],
+      "load_after": 33.0,
+      "load_before": 16.0,
+      "member": "alex",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-02-27"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 16.0,
+      "member": "sam",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-02-28"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "rivka(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 8.0,
+      "member": "dan",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-03-01"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "dan(load 32.00)",
+        "rivka(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 27.0,
+      "member": "sam",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-03-02"
+    },
+    {
+      "alternatives": [
+        "dan(load 32.00)",
+        "rivka(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 33.0,
+      "load_before": 28.0,
+      "member": "alex",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-03-03"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "rivka(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 28.0,
+      "member": "dan",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-03-04"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "dan(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 28.0,
+      "member": "rivka",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-03-05"
+    },
+    {
+      "alternatives": [
+        "sam(load 32.00)"
+      ],
+      "load_after": 33.0,
+      "load_before": 18.0,
+      "member": "alex",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-03-06"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 18.0,
+      "member": "sam",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-03-07"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "dan(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 8.0,
+      "member": "rivka",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-03-08"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "dan(load 32.00)",
+        "rivka(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 28.0,
+      "member": "sam",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-03-09"
+    },
+    {
+      "alternatives": [
+        "dan(load 32.00)",
+        "rivka(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 33.0,
+      "load_before": 29.0,
+      "member": "alex",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-03-10"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "rivka(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 29.0,
+      "member": "dan",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-03-11"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "dan(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 29.0,
+      "member": "rivka",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-03-12"
+    },
+    {
+      "alternatives": [
+        "sam(load 32.00)"
+      ],
+      "load_after": 33.0,
+      "load_before": 20.0,
+      "member": "alex",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-03-13"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 20.0,
+      "member": "sam",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-03-14"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "rivka(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 10.0,
+      "member": "dan",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-03-15"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "dan(load 32.00)",
+        "rivka(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 29.0,
+      "member": "sam",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-03-16"
+    },
+    {
+      "alternatives": [
+        "dan(load 32.00)",
+        "rivka(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 33.0,
+      "load_before": 30.0,
+      "member": "alex",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-03-17"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "rivka(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 30.0,
+      "member": "dan",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-03-18"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "dan(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 30.0,
+      "member": "rivka",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-03-19"
+    },
+    {
+      "alternatives": [
+        "sam(load 32.00)"
+      ],
+      "load_after": 33.0,
+      "load_before": 22.0,
+      "member": "alex",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-03-20"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 22.0,
+      "member": "sam",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-03-21"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "dan(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 10.0,
+      "member": "rivka",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-03-22"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "dan(load 32.00)",
+        "rivka(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 30.0,
+      "member": "sam",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-03-23"
+    },
+    {
+      "alternatives": [
+        "dan(load 32.00)",
+        "rivka(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 33.0,
+      "load_before": 31.0,
+      "member": "alex",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-03-24"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "rivka(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 31.0,
+      "member": "dan",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-03-25"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "dan(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 31.0,
+      "member": "rivka",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-03-26"
+    },
+    {
+      "alternatives": [
+        "sam(load 32.00)"
+      ],
+      "load_after": 33.0,
+      "load_before": 24.0,
+      "member": "alex",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-03-27"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 24.0,
+      "member": "sam",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-03-28"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "rivka(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 12.0,
+      "member": "dan",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-03-29"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "dan(load 32.00)",
+        "rivka(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 31.0,
+      "member": "sam",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-03-30"
+    },
+    {
+      "alternatives": [
+        "dan(load 32.00)",
+        "rivka(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 33.0,
+      "load_before": 32.0,
+      "member": "alex",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-03-31"
+    }
+  ],
+  "shifts": [
+    {
+      "basis": [
+        "base"
+      ],
+      "end_utc": "2026-01-02T10:00:00+00:00",
+      "id": "2026-01-01",
+      "start_utc": "2026-01-01T10:00:00+00:00",
+      "weight": 1.0
+    },
+    {
+      "basis": [
+        "base",
+        "weekend"
+      ],
+      "end_utc": "2026-01-03T10:00:00+00:00",
+      "id": "2026-01-02",
+      "start_utc": "2026-01-02T10:00:00+00:00",
+      "weight": 2.0
+    },
+    {
+      "basis": [
+        "base",
+        "weekend"
+      ],
+      "end_utc": "2026-01-04T10:00:00+00:00",
+      "id": "2026-01-03",
+      "start_utc": "2026-01-03T10:00:00+00:00",
+      "weight": 2.0
+    },
+    {
+      "basis": [
+        "base",
+        "weekend"
+      ],
+      "end_utc": "2026-01-05T10:00:00+00:00",
+      "id": "2026-01-04",
+      "start_utc": "2026-01-04T10:00:00+00:00",
+      "weight": 2.0
+    },
+    {
+      "basis": [
+        "base"
+      ],
+      "end_utc": "2026-01-06T10:00:00+00:00",
+      "id": "2026-01-05",
+      "start_utc": "2026-01-05T10:00:00+00:00",
+      "weight": 1.0
+    },
+    {
+      "basis": [
+        "base"
+      ],
+      "end_utc": "2026-01-07T10:00:00+00:00",
+      "id": "2026-01-06",
+      "start_utc": "2026-01-06T10:00:00+00:00",
+      "weight": 1.0
+    },
+    {
+      "basis": [
+        "base"
+      ],
+      "end_utc": "2026-01-08T10:00:00+00:00",
+      "id": "2026-01-07",
+      "start_utc": "2026-01-07T10:00:00+00:00",
+      "weight": 1.0
+    },
+    {
+      "basis": [
+        "base"
+      ],
+      "end_utc": "2026-01-09T10:00:00+00:00",
+      "id": "2026-01-08",
+      "start_utc": "2026-01-08T10:00:00+00:00",
+      "weight": 1.0
+    },
+    {
+      "basis": [
+        "base",
+        "weekend"
+      ],
+      "end_utc": "2026-01-10T10:00:00+00:00",
+      "id": "2026-01-09",
+      "start_utc": "2026-01-09T10:00:00+00:00",
+      "weight": 2.0
+    },
+    {
+      "basis": [
+        "base",
+        "weekend"
+      ],
+      "end_utc": "2026-01-11T10:00:00+00:00",
+      "id": "2026-01-10",
+      "start_utc": "2026-01-10T10:00:00+00:00",
+      "weight": 2.0
+    },
+    {
+      "basis": [
+        "base",
+        "weekend"
+      ],
+      "end_utc": "2026-01-12T10:00:00+00:00",
+      "id": "2026-01-11",
+      "start_utc": "2026-01-11T10:00:00+00:00",
+      "weight": 2.0
+    },
+    {
+      "basis": [
+        "base"
+      ],
+      "end_utc": "2026-01-13T10:00:00+00:00",
+      "id": "2026-01-12",
+      "start_utc": "2026-01-12T10:00:00+00:00",
+      "weight": 1.0
+    },
+    {
+      "basis": [
+        "base"
+      ],
+      "end_utc": "2026-01-14T10:00:00+00:00",
+      "id": "2026-01-13",
+      "start_utc": "2026-01-13T10:00:00+00:00",
+      "weight": 1.0
+    },
+    {
+      "basis": [
+        "base"
+      ],
+      "end_utc": "2026-01-15T10:00:00+00:00",
+      "id": "2026-01-14",
+      "start_utc": "2026-01-14T10:00:00+00:00",
+      "weight": 1.0
+    },
+    {
+      "basis": [
+        "base"
+      ],
+      "end_utc": "2026-01-16T10:00:00+00:00",
+      "id": "2026-01-15",
+      "start_utc": "2026-01-15T10:00:00+00:00",
+      "weight": 1.0
+    },
+    {
+      "basis": [
+        "base",
+        "weekend"
+      ],
+      "end_utc": "2026-01-17T10:00:00+00:00",
+      "id": "2026-01-16",
+      "start_utc": "2026-01-16T10:00:00+00:00",
+      "weight": 2.0
+    },
+    {
+      "basis": [
+        "base",
+        "weekend"
+      ],
+      "end_utc": "2026-01-18T10:00:00+00:00",
+      "id": "2026-01-17",
+      "start_utc": "2026-01-17T10:00:00+00:00",
+      "weight": 2.0
+    },
+    {
+      "basis": [
+        "base",
+        "weekend"
+      ],
+      "end_utc": "2026-01-19T10:00:00+00:00",
+      "id": "2026-01-18",
+      "start_utc": "2026-01-18T10:00:00+00:00",
+      "weight": 2.0
+    },
+    {
+      "basis": [
+        "base"
+      ],
+      "end_utc": "2026-01-20T10:00:00+00:00",
+      "id": "2026-01-19",
+      "start_utc": "2026-01-19T10:00:00+00:00",
+      "weight": 1.0
+    },
+    {
+      "basis": [
+        "base"
+      ],
+      "end_utc": "2026-01-21T10:00:00+00:00",
+      "id": "2026-01-20",
+      "start_utc": "2026-01-20T10:00:00+00:00",
+      "weight": 1.0
+    },
+    {
+      "basis": [
+        "base"
+      ],
+      "end_utc": "2026-01-22T10:00:00+00:00",
+      "id": "2026-01-21",
+      "start_utc": "2026-01-21T10:00:00+00:00",
+      "weight": 1.0
+    },
+    {
+      "basis": [
+        "base"
+      ],
+      "end_utc": "2026-01-23T10:00:00+00:00",
+      "id": "2026-01-22",
+      "start_utc": "2026-01-22T10:00:00+00:00",
+      "weight": 1.0
+    },
+    {
+      "basis": [
+        "base",
+        "weekend"
+      ],
+      "end_utc": "2026-01-24T10:00:00+00:00",
+      "id": "2026-01-23",
+      "start_utc": "2026-01-23T10:00:00+00:00",
+      "weight": 2.0
+    },
+    {
+      "basis": [
+        "base",
+        "weekend"
+      ],
+      "end_utc": "2026-01-25T10:00:00+00:00",
+      "id": "2026-01-24",
+      "start_utc": "2026-01-24T10:00:00+00:00",
+      "weight": 2.0
+    },
+    {
+      "basis": [
+        "base",
+        "weekend"
+      ],
+      "end_utc": "2026-01-26T10:00:00+00:00",
+      "id": "2026-01-25",
+      "start_utc": "2026-01-25T10:00:00+00:00",
+      "weight": 2.0
+    },
+    {
+      "basis": [
+        "base"
+      ],
+      "end_utc": "2026-01-27T10:00:00+00:00",
+      "id": "2026-01-26",
+      "start_utc": "2026-01-26T10:00:00+00:00",
+      "weight": 1.0
+    },
+    {
+      "basis": [
+        "base"
+      ],
+      "end_utc": "2026-01-28T10:00:00+00:00",
+      "id": "2026-01-27",
+      "start_utc": "2026-01-27T10:00:00+00:00",
+      "weight": 1.0
+    },
+    {
+      "basis": [
+        "base"
+      ],
+      "end_utc": "2026-01-29T10:00:00+00:00",
+      "id": "2026-01-28",
+      "start_utc": "2026-01-28T10:00:00+00:00",
+      "weight": 1.0
+    },
+    {
+      "basis": [
+        "base"
+      ],
+      "end_utc": "2026-01-30T10:00:00+00:00",
+      "id": "2026-01-29",
+      "start_utc": "2026-01-29T10:00:00+00:00",
+      "weight": 1.0
+    },
+    {
+      "basis": [
+        "base",
+        "weekend"
+      ],
+      "end_utc": "2026-01-31T10:00:00+00:00",
+      "id": "2026-01-30",
+      "start_utc": "2026-01-30T10:00:00+00:00",
+      "weight": 2.0
+    },
+    {
+      "basis": [
+        "base",
+        "weekend"
+      ],
+      "end_utc": "2026-02-01T10:00:00+00:00",
+      "id": "2026-01-31",
+      "start_utc": "2026-01-31T10:00:00+00:00",
+      "weight": 2.0
+    },
+    {
+      "basis": [
+        "base",
+        "weekend"
+      ],
+      "end_utc": "2026-02-02T10:00:00+00:00",
+      "id": "2026-02-01",
+      "start_utc": "2026-02-01T10:00:00+00:00",
+      "weight": 2.0
+    },
+    {
+      "basis": [
+        "base"
+      ],
+      "end_utc": "2026-02-03T10:00:00+00:00",
+      "id": "2026-02-02",
+      "start_utc": "2026-02-02T10:00:00+00:00",
+      "weight": 1.0
+    },
+    {
+      "basis": [
+        "base"
+      ],
+      "end_utc": "2026-02-04T10:00:00+00:00",
+      "id": "2026-02-03",
+      "start_utc": "2026-02-03T10:00:00+00:00",
+      "weight": 1.0
+    },
+    {
+      "basis": [
+        "base"
+      ],
+      "end_utc": "2026-02-05T10:00:00+00:00",
+      "id": "2026-02-04",
+      "start_utc": "2026-02-04T10:00:00+00:00",
+      "weight": 1.0
+    },
+    {
+      "basis": [
+        "base"
+      ],
+      "end_utc": "2026-02-06T10:00:00+00:00",
+      "id": "2026-02-05",
+      "start_utc": "2026-02-05T10:00:00+00:00",
+      "weight": 1.0
+    },
+    {
+      "basis": [
+        "base",
+        "weekend"
+      ],
+      "end_utc": "2026-02-07T10:00:00+00:00",
+      "id": "2026-02-06",
+      "start_utc": "2026-02-06T10:00:00+00:00",
+      "weight": 2.0
+    },
+    {
+      "basis": [
+        "base",
+        "weekend"
+      ],
+      "end_utc": "2026-02-08T10:00:00+00:00",
+      "id": "2026-02-07",
+      "start_utc": "2026-02-07T10:00:00+00:00",
+      "weight": 2.0
+    },
+    {
+      "basis": [
+        "base",
+        "weekend"
+      ],
+      "end_utc": "2026-02-09T10:00:00+00:00",
+      "id": "2026-02-08",
+      "start_utc": "2026-02-08T10:00:00+00:00",
+      "weight": 2.0
+    },
+    {
+      "basis": [
+        "base"
+      ],
+      "end_utc": "2026-02-10T10:00:00+00:00",
+      "id": "2026-02-09",
+      "start_utc": "2026-02-09T10:00:00+00:00",
+      "weight": 1.0
+    },
+    {
+      "basis": [
+        "base"
+      ],
+      "end_utc": "2026-02-11T10:00:00+00:00",
+      "id": "2026-02-10",
+      "start_utc": "2026-02-10T10:00:00+00:00",
+      "weight": 1.0
+    },
+    {
+      "basis": [
+        "base"
+      ],
+      "end_utc": "2026-02-12T10:00:00+00:00",
+      "id": "2026-02-11",
+      "start_utc": "2026-02-11T10:00:00+00:00",
+      "weight": 1.0
+    },
+    {
+      "basis": [
+        "base"
+      ],
+      "end_utc": "2026-02-13T10:00:00+00:00",
+      "id": "2026-02-12",
+      "start_utc": "2026-02-12T10:00:00+00:00",
+      "weight": 1.0
+    },
+    {
+      "basis": [
+        "base",
+        "weekend"
+      ],
+      "end_utc": "2026-02-14T10:00:00+00:00",
+      "id": "2026-02-13",
+      "start_utc": "2026-02-13T10:00:00+00:00",
+      "weight": 2.0
+    },
+    {
+      "basis": [
+        "base",
+        "weekend"
+      ],
+      "end_utc": "2026-02-15T10:00:00+00:00",
+      "id": "2026-02-14",
+      "start_utc": "2026-02-14T10:00:00+00:00",
+      "weight": 2.0
+    },
+    {
+      "basis": [
+        "base",
+        "weekend"
+      ],
+      "end_utc": "2026-02-16T10:00:00+00:00",
+      "id": "2026-02-15",
+      "start_utc": "2026-02-15T10:00:00+00:00",
+      "weight": 2.0
+    },
+    {
+      "basis": [
+        "base"
+      ],
+      "end_utc": "2026-02-17T10:00:00+00:00",
+      "id": "2026-02-16",
+      "start_utc": "2026-02-16T10:00:00+00:00",
+      "weight": 1.0
+    },
+    {
+      "basis": [
+        "base"
+      ],
+      "end_utc": "2026-02-18T10:00:00+00:00",
+      "id": "2026-02-17",
+      "start_utc": "2026-02-17T10:00:00+00:00",
+      "weight": 1.0
+    },
+    {
+      "basis": [
+        "base"
+      ],
+      "end_utc": "2026-02-19T10:00:00+00:00",
+      "id": "2026-02-18",
+      "start_utc": "2026-02-18T10:00:00+00:00",
+      "weight": 1.0
+    },
+    {
+      "basis": [
+        "base"
+      ],
+      "end_utc": "2026-02-20T10:00:00+00:00",
+      "id": "2026-02-19",
+      "start_utc": "2026-02-19T10:00:00+00:00",
+      "weight": 1.0
+    },
+    {
+      "basis": [
+        "base",
+        "weekend"
+      ],
+      "end_utc": "2026-02-21T10:00:00+00:00",
+      "id": "2026-02-20",
+      "start_utc": "2026-02-20T10:00:00+00:00",
+      "weight": 2.0
+    },
+    {
+      "basis": [
+        "base",
+        "weekend"
+      ],
+      "end_utc": "2026-02-22T10:00:00+00:00",
+      "id": "2026-02-21",
+      "start_utc": "2026-02-21T10:00:00+00:00",
+      "weight": 2.0
+    },
+    {
+      "basis": [
+        "base",
+        "weekend"
+      ],
+      "end_utc": "2026-02-23T10:00:00+00:00",
+      "id": "2026-02-22",
+      "start_utc": "2026-02-22T10:00:00+00:00",
+      "weight": 2.0
+    },
+    {
+      "basis": [
+        "base"
+      ],
+      "end_utc": "2026-02-24T10:00:00+00:00",
+      "id": "2026-02-23",
+      "start_utc": "2026-02-23T10:00:00+00:00",
+      "weight": 1.0
+    },
+    {
+      "basis": [
+        "base"
+      ],
+      "end_utc": "2026-02-25T10:00:00+00:00",
+      "id": "2026-02-24",
+      "start_utc": "2026-02-24T10:00:00+00:00",
+      "weight": 1.0
+    },
+    {
+      "basis": [
+        "base"
+      ],
+      "end_utc": "2026-02-26T10:00:00+00:00",
+      "id": "2026-02-25",
+      "start_utc": "2026-02-25T10:00:00+00:00",
+      "weight": 1.0
+    },
+    {
+      "basis": [
+        "base"
+      ],
+      "end_utc": "2026-02-27T10:00:00+00:00",
+      "id": "2026-02-26",
+      "start_utc": "2026-02-26T10:00:00+00:00",
+      "weight": 1.0
+    },
+    {
+      "basis": [
+        "base",
+        "weekend"
+      ],
+      "end_utc": "2026-02-28T10:00:00+00:00",
+      "id": "2026-02-27",
+      "start_utc": "2026-02-27T10:00:00+00:00",
+      "weight": 2.0
+    },
+    {
+      "basis": [
+        "base",
+        "weekend"
+      ],
+      "end_utc": "2026-03-01T10:00:00+00:00",
+      "id": "2026-02-28",
+      "start_utc": "2026-02-28T10:00:00+00:00",
+      "weight": 2.0
+    },
+    {
+      "basis": [
+        "base",
+        "weekend"
+      ],
+      "end_utc": "2026-03-02T10:00:00+00:00",
+      "id": "2026-03-01",
+      "start_utc": "2026-03-01T10:00:00+00:00",
+      "weight": 2.0
+    },
+    {
+      "basis": [
+        "base"
+      ],
+      "end_utc": "2026-03-03T10:00:00+00:00",
+      "id": "2026-03-02",
+      "start_utc": "2026-03-02T10:00:00+00:00",
+      "weight": 1.0
+    },
+    {
+      "basis": [
+        "base"
+      ],
+      "end_utc": "2026-03-04T10:00:00+00:00",
+      "id": "2026-03-03",
+      "start_utc": "2026-03-03T10:00:00+00:00",
+      "weight": 1.0
+    },
+    {
+      "basis": [
+        "base"
+      ],
+      "end_utc": "2026-03-05T10:00:00+00:00",
+      "id": "2026-03-04",
+      "start_utc": "2026-03-04T10:00:00+00:00",
+      "weight": 1.0
+    },
+    {
+      "basis": [
+        "base"
+      ],
+      "end_utc": "2026-03-06T10:00:00+00:00",
+      "id": "2026-03-05",
+      "start_utc": "2026-03-05T10:00:00+00:00",
+      "weight": 1.0
+    },
+    {
+      "basis": [
+        "base",
+        "weekend"
+      ],
+      "end_utc": "2026-03-07T10:00:00+00:00",
+      "id": "2026-03-06",
+      "start_utc": "2026-03-06T10:00:00+00:00",
+      "weight": 2.0
+    },
+    {
+      "basis": [
+        "base",
+        "weekend"
+      ],
+      "end_utc": "2026-03-08T10:00:00+00:00",
+      "id": "2026-03-07",
+      "start_utc": "2026-03-07T10:00:00+00:00",
+      "weight": 2.0
+    },
+    {
+      "basis": [
+        "base",
+        "weekend"
+      ],
+      "end_utc": "2026-03-09T10:00:00+00:00",
+      "id": "2026-03-08",
+      "start_utc": "2026-03-08T10:00:00+00:00",
+      "weight": 2.0
+    },
+    {
+      "basis": [
+        "base"
+      ],
+      "end_utc": "2026-03-10T10:00:00+00:00",
+      "id": "2026-03-09",
+      "start_utc": "2026-03-09T10:00:00+00:00",
+      "weight": 1.0
+    },
+    {
+      "basis": [
+        "base"
+      ],
+      "end_utc": "2026-03-11T10:00:00+00:00",
+      "id": "2026-03-10",
+      "start_utc": "2026-03-10T10:00:00+00:00",
+      "weight": 1.0
+    },
+    {
+      "basis": [
+        "base"
+      ],
+      "end_utc": "2026-03-12T10:00:00+00:00",
+      "id": "2026-03-11",
+      "start_utc": "2026-03-11T10:00:00+00:00",
+      "weight": 1.0
+    },
+    {
+      "basis": [
+        "base"
+      ],
+      "end_utc": "2026-03-13T10:00:00+00:00",
+      "id": "2026-03-12",
+      "start_utc": "2026-03-12T10:00:00+00:00",
+      "weight": 1.0
+    },
+    {
+      "basis": [
+        "base",
+        "weekend"
+      ],
+      "end_utc": "2026-03-14T10:00:00+00:00",
+      "id": "2026-03-13",
+      "start_utc": "2026-03-13T10:00:00+00:00",
+      "weight": 2.0
+    },
+    {
+      "basis": [
+        "base",
+        "weekend"
+      ],
+      "end_utc": "2026-03-15T10:00:00+00:00",
+      "id": "2026-03-14",
+      "start_utc": "2026-03-14T10:00:00+00:00",
+      "weight": 2.0
+    },
+    {
+      "basis": [
+        "base",
+        "weekend"
+      ],
+      "end_utc": "2026-03-16T10:00:00+00:00",
+      "id": "2026-03-15",
+      "start_utc": "2026-03-15T10:00:00+00:00",
+      "weight": 2.0
+    },
+    {
+      "basis": [
+        "base"
+      ],
+      "end_utc": "2026-03-17T10:00:00+00:00",
+      "id": "2026-03-16",
+      "start_utc": "2026-03-16T10:00:00+00:00",
+      "weight": 1.0
+    },
+    {
+      "basis": [
+        "base"
+      ],
+      "end_utc": "2026-03-18T10:00:00+00:00",
+      "id": "2026-03-17",
+      "start_utc": "2026-03-17T10:00:00+00:00",
+      "weight": 1.0
+    },
+    {
+      "basis": [
+        "base"
+      ],
+      "end_utc": "2026-03-19T10:00:00+00:00",
+      "id": "2026-03-18",
+      "start_utc": "2026-03-18T10:00:00+00:00",
+      "weight": 1.0
+    },
+    {
+      "basis": [
+        "base"
+      ],
+      "end_utc": "2026-03-20T10:00:00+00:00",
+      "id": "2026-03-19",
+      "start_utc": "2026-03-19T10:00:00+00:00",
+      "weight": 1.0
+    },
+    {
+      "basis": [
+        "base",
+        "weekend"
+      ],
+      "end_utc": "2026-03-21T10:00:00+00:00",
+      "id": "2026-03-20",
+      "start_utc": "2026-03-20T10:00:00+00:00",
+      "weight": 2.0
+    },
+    {
+      "basis": [
+        "base",
+        "weekend"
+      ],
+      "end_utc": "2026-03-22T10:00:00+00:00",
+      "id": "2026-03-21",
+      "start_utc": "2026-03-21T10:00:00+00:00",
+      "weight": 2.0
+    },
+    {
+      "basis": [
+        "base",
+        "weekend"
+      ],
+      "end_utc": "2026-03-23T10:00:00+00:00",
+      "id": "2026-03-22",
+      "start_utc": "2026-03-22T10:00:00+00:00",
+      "weight": 2.0
+    },
+    {
+      "basis": [
+        "base"
+      ],
+      "end_utc": "2026-03-24T10:00:00+00:00",
+      "id": "2026-03-23",
+      "start_utc": "2026-03-23T10:00:00+00:00",
+      "weight": 1.0
+    },
+    {
+      "basis": [
+        "base"
+      ],
+      "end_utc": "2026-03-25T10:00:00+00:00",
+      "id": "2026-03-24",
+      "start_utc": "2026-03-24T10:00:00+00:00",
+      "weight": 1.0
+    },
+    {
+      "basis": [
+        "base"
+      ],
+      "end_utc": "2026-03-26T10:00:00+00:00",
+      "id": "2026-03-25",
+      "start_utc": "2026-03-25T10:00:00+00:00",
+      "weight": 1.0
+    },
+    {
+      "basis": [
+        "base"
+      ],
+      "end_utc": "2026-03-27T10:00:00+00:00",
+      "id": "2026-03-26",
+      "start_utc": "2026-03-26T10:00:00+00:00",
+      "weight": 1.0
+    },
+    {
+      "basis": [
+        "base",
+        "weekend"
+      ],
+      "end_utc": "2026-03-28T10:00:00+00:00",
+      "id": "2026-03-27",
+      "start_utc": "2026-03-27T10:00:00+00:00",
+      "weight": 2.0
+    },
+    {
+      "basis": [
+        "base",
+        "weekend"
+      ],
+      "end_utc": "2026-03-29T10:00:00+00:00",
+      "id": "2026-03-28",
+      "start_utc": "2026-03-28T10:00:00+00:00",
+      "weight": 2.0
+    },
+    {
+      "basis": [
+        "base",
+        "weekend"
+      ],
+      "end_utc": "2026-03-30T10:00:00+00:00",
+      "id": "2026-03-29",
+      "start_utc": "2026-03-29T10:00:00+00:00",
+      "weight": 2.0
+    },
+    {
+      "basis": [
+        "base"
+      ],
+      "end_utc": "2026-03-31T10:00:00+00:00",
+      "id": "2026-03-30",
+      "start_utc": "2026-03-30T10:00:00+00:00",
+      "weight": 1.0
+    },
+    {
+      "basis": [
+        "base"
+      ],
+      "end_utc": "2026-04-01T10:00:00+00:00",
+      "id": "2026-03-31",
+      "start_utc": "2026-03-31T10:00:00+00:00",
+      "weight": 1.0
+    }
+  ],
+  "window": {
+    "from": "2026-01-01",
+    "policy": "daily",
+    "to": "2026-03-31"
+  }
+}

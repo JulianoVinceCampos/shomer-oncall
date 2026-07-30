@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>shomer-oncall :: visualizador de escala</title>
+<style>
+  :root {
+    --bg: #0d1117; --panel: #161b22; --panel2: #1c2230; --line: #2a3140;
+    --fg: #e6edf3; --muted: #9aa6b2; --accent: #58a6ff; --good: #3fb950;
+    --warn: #d29922; --bad: #f85149; --shabbat: #7c5cff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--fg);
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+  }
+  header {
+    padding: 28px 24px 18px; border-bottom: 1px solid var(--line);
+    background: linear-gradient(180deg, #12182280, transparent);
+  }
+  h1 { margin: 0; font-size: 1.5rem; letter-spacing: .3px; }
+  h1 .sh { color: var(--shabbat); }
+  .sub { color: var(--muted); margin-top: 6px; font-size: .95rem; }
+  main { max-width: 1120px; margin: 0 auto; padding: 22px 24px 60px; }
+  section { margin-top: 30px; }
+  h2 { font-size: 1.05rem; margin: 0 0 14px; font-weight: 600; }
+  h2 .hint { color: var(--muted); font-weight: 400; font-size: .85rem; }
+
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
+  .card {
+    background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px;
+  }
+  .card .k { color: var(--muted); font-size: .78rem; text-transform: uppercase; letter-spacing: .5px; }
+  .card .v { font-size: 1.7rem; font-weight: 700; margin-top: 4px; }
+  .card .v.ok { color: var(--good); } .card .v.bad { color: var(--bad); }
+
+  .banner {
+    margin-top: 18px; background: var(--panel2); border: 1px solid var(--line);
+    border-left: 3px solid var(--shabbat); border-radius: 8px; padding: 12px 16px; color: var(--fg);
+  }
+  .banner b { color: #fff; }
+
+  .bars { display: flex; flex-direction: column; gap: 10px; }
+  .bar-row { display: grid; grid-template-columns: 130px 1fr 120px; align-items: center; gap: 12px; }
+  .bar-name { font-weight: 600; display: flex; align-items: center; gap: 7px; }
+  .swatch { width: 12px; height: 12px; border-radius: 3px; flex: none; }
+  .star { color: var(--shabbat); }
+  .bar-track { background: #0b0f16; border: 1px solid var(--line); border-radius: 6px; height: 22px; overflow: hidden; }
+  .bar-fill { height: 100%; }
+  .bar-meta { color: var(--muted); font-size: .85rem; text-align: right; }
+
+  .legend { display: flex; flex-wrap: wrap; gap: 14px; margin: 4px 0 16px; color: var(--muted); font-size: .88rem; }
+  .legend span { display: inline-flex; align-items: center; gap: 6px; }
+
+  .months { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+  .month h3 { margin: 0 0 8px; font-size: .95rem; font-weight: 600; }
+  .grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; }
+  .dow { color: var(--muted); font-size: .7rem; text-align: center; padding: 2px 0; }
+  .cell {
+    min-height: 52px; border: 1px solid var(--line); border-radius: 6px; padding: 4px 5px;
+    background: var(--panel); position: relative; overflow: hidden;
+  }
+  .cell.empty { background: transparent; border-color: transparent; }
+  .cell.weekend { background: #12151c; }
+  .cell.restricted { outline: 1px solid var(--shabbat); }
+  .cell .dnum { font-size: .7rem; color: var(--muted); }
+  .cell .who { font-size: .74rem; font-weight: 600; margin-top: 3px; border-radius: 4px; padding: 1px 4px; display: inline-block; }
+  .cell .tag { position: absolute; top: 3px; right: 4px; font-size: .6rem; color: var(--shabbat); font-weight: 700; }
+  .cell .tag.uncov { color: var(--bad); }
+
+  .toolbar { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin-top: 10px; }
+  .btn {
+    background: var(--panel2); border: 1px solid var(--line); color: var(--fg);
+    border-radius: 8px; padding: 8px 12px; cursor: pointer; font-size: .88rem;
+  }
+  .btn:hover { border-color: var(--accent); }
+  .note { color: var(--muted); font-size: .82rem; }
+  a { color: var(--accent); }
+  footer { color: var(--muted); font-size: .8rem; margin-top: 40px; border-top: 1px solid var(--line); padding-top: 16px; }
+  #err { color: var(--warn); }
+</style>
+</head>
+<body>
+<header>
+  <h1><span class="sh">shomer</span>-oncall</h1>
+  <div class="sub">Rotacao de plantao ciente do calendario hebraico. Este visualizador le a saida
+    real da ferramenta (<code>schedule.json</code>) e mostra a escala e a fairness.</div>
+  <div class="toolbar">
+    <label class="btn">Carregar schedule.json
+      <input id="file" type="file" accept="application/json" style="display:none" />
+    </label>
+    <span class="note" id="src"></span>
+  </div>
+  <div id="err"></div>
+</header>
+<main>
+  <section id="banner-wrap"></section>
+  <section id="score"><h2>Fairness <span class="hint">- medida em weighted load, nao em contagem de shifts</span></h2><div id="cards" class="cards"></div></section>
+  <section id="loadsec"><h2>Carga por membro <span class="hint">- observantes marcados com estrela</span></h2><div id="bars" class="bars"></div></section>
+  <section id="calsec"><h2>Escala <span class="hint">- cada dia colorido por quem esta de plantao; dias de Shabbat/Yom Tov com contorno roxo</span></h2>
+    <div id="legend" class="legend"></div>
+    <div id="months" class="months"></div>
+  </section>
+  <footer>
+    Gerado por <a href="https://github.com/JulianoVinceCampos/shomer-oncall">shomer-oncall</a> -
+    zero dependencia de runtime, saida deterministica. Este visualizador tambem e HTML/CSS/JS puro,
+    sem framework nem CDN.
+  </footer>
+</main>
+
+<script>
+"use strict";
+
+const PALETTE = ["#58a6ff", "#3fb950", "#d29922", "#f778ba", "#a371f7", "#ff7b72", "#39c5cf", "#e3b341"];
+const DOW = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sab"];
+const MONTHS = ["Janeiro","Fevereiro","Marco","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"];
+
+function el(tag, cls, txt) { const e = document.createElement(tag); if (cls) e.className = cls; if (txt != null) e.textContent = txt; return e; }
+function isoToUTC(iso) { return new Date(iso.length <= 10 ? iso + "T00:00:00Z" : iso); }
+
+// ---- metricas (client-side, funcionam com qualquer schedule.json) ----
+function jain(v) { const n = v.length; if (!n) return 1; const d = n * v.reduce((a, x) => a + x * x, 0); if (!d) return 1; const s = v.reduce((a, x) => a + x, 0); return s * s / d; }
+function gini(v) { const n = v.length, t = v.reduce((a, x) => a + x, 0); if (!n || !t) return 0; let s = 0; for (const a of v) for (const b of v) s += Math.abs(a - b); return s / (2 * n * t); }
+function spread(v) { return v.length ? Math.max(...v) - Math.min(...v) : 0; }
+
+function computeLoads(schedule) {
+  const w = {}; for (const s of schedule.shifts) w[s.id] = s.weight;
+  const load = {}, count = {};
+  for (const a of schedule.assignments) {
+    if (a.member == null) continue;
+    load[a.member] = (load[a.member] || 0) + (w[a.shift] || 0);
+    count[a.member] = (count[a.member] || 0) + 1;
+  }
+  return { load, count };
+}
+
+function observersFromAudit(audit) {
+  const obs = new Set();
+  if (audit && audit.records) for (const r of audit.records) if (r.type === "boundary") obs.add(r.member);
+  return obs;
+}
+
+// dias com restricao (Shabbat/Yom Tov) a partir do audit trail
+function restrictedDays(audit) {
+  const map = {};
+  if (!audit || !audit.records) return map;
+  for (const r of audit.records) {
+    if (r.type !== "boundary") continue;
+    const start = isoToUTC(r.start_utc), end = isoToUTC(r.end_utc);
+    for (let t = new Date(Date.UTC(start.getUTCFullYear(), start.getUTCMonth(), start.getUTCDate()));
+         t <= end; t.setUTCDate(t.getUTCDate() + 1)) {
+      map[t.toISOString().slice(0, 10)] = r.kind;
+    }
+  }
+  return map;
+}
+
+function colorMap(members) { const m = {}; members.forEach((id, i) => m[id] = PALETTE[i % PALETTE.length]); return m; }
+
+function render(schedule, metrics, audit) {
+  const { load, count } = computeLoads(schedule);
+  const members = Object.keys(load).sort();
+  const colors = colorMap(members);
+  const observers = observersFromAudit(audit);
+  const loads = members.map(m => load[m]);
+  const total = loads.reduce((a, x) => a + x, 0);
+  const restr = restrictedDays(audit);
+
+  // ---- scorecard ----
+  const j = metrics?.fairness?.jain ?? jain(loads);
+  const g = metrics?.fairness?.gini ?? gini(loads);
+  const sp = metrics?.fairness?.spread ?? spread(loads);
+  const gap = metrics?.fairness?.equity_gap_pct;
+  const cov = metrics?.coverage?.ratio;
+  const viol = metrics?.coverage?.violations;
+  const uncov = metrics?.coverage?.uncovered ?? schedule.assignments.filter(a => a.member == null).length;
+
+  const cards = document.getElementById("cards"); cards.innerHTML = "";
+  const card = (k, v, cls) => { const c = el("div", "card"); c.appendChild(el("div", "k", k)); c.appendChild(el("div", "v" + (cls ? " " + cls : ""), v)); cards.appendChild(c); };
+  card("Jain index", j.toFixed(4), j >= 0.95 ? "ok" : "bad");
+  card("Gini", g.toFixed(4));
+  card("Weighted spread", sp.toFixed(2), sp <= 3 ? "ok" : "bad");
+  if (gap != null) card("Gap observer/non", gap.toFixed(2) + "%", gap <= 5 ? "ok" : "bad");
+  if (cov != null) card("Coverage", Math.round(cov * 100) + "%", cov >= 1 ? "ok" : "bad");
+  card("Violations", viol != null ? viol : "-", (viol === 0 || viol == null) ? "ok" : "bad");
+  card("Uncovered", uncov, uncov === 0 ? "ok" : "bad");
+
+  // ---- banner (a tese) ----
+  const bw = document.getElementById("banner-wrap"); bw.innerHTML = "";
+  if (observers.size) {
+    const eq = total / members.length;
+    const obsLoads = members.filter(m => observers.has(m)).map(m => load[m]);
+    const obsAvg = obsLoads.reduce((a, x) => a + x, 0) / (obsLoads.length || 1);
+    const b = el("div", "banner");
+    b.innerHTML = "<b>" + [...observers].sort().join(", ") + "</b> (observantes) carregam em media <b>"
+      + obsAvg.toFixed(1) + "</b> de weighted load, contra a media geral de <b>" + eq.toFixed(1)
+      + "</b> - sem pegar nenhum shift de sexta/sabado. Fairness medida, nao afirmada.";
+    bw.appendChild(b);
+  }
+
+  // ---- barras de carga ----
+  const bars = document.getElementById("bars"); bars.innerHTML = "";
+  const max = Math.max(...loads, 1);
+  for (const m of members) {
+    const row = el("div", "bar-row");
+    const name = el("div", "bar-name");
+    const sw = el("span", "swatch"); sw.style.background = colors[m]; name.appendChild(sw);
+    name.appendChild(el("span", null, m));
+    if (observers.has(m)) { const st = el("span", "star", "\u2726"); name.appendChild(st); }
+    row.appendChild(name);
+    const track = el("div", "bar-track");
+    const fill = el("div", "bar-fill"); fill.style.width = (load[m] / max * 100).toFixed(1) + "%"; fill.style.background = colors[m];
+    track.appendChild(fill); row.appendChild(track);
+    row.appendChild(el("div", "bar-meta", count[m] + " shifts \u00b7 " + load[m].toFixed(1) + " load"));
+    bars.appendChild(row);
+  }
+
+  // ---- legenda ----
+  const legend = document.getElementById("legend"); legend.innerHTML = "";
+  for (const m of members) {
+    const s = el("span"); const sw = el("span", "swatch"); sw.style.background = colors[m];
+    s.appendChild(sw); s.appendChild(el("span", null, m + (observers.has(m) ? " \u2726" : ""))); legend.appendChild(s);
+  }
+  { const s = el("span"); s.innerHTML = '<span class="swatch" style="background:transparent;outline:1px solid var(--shabbat)"></span> Shabbat / Yom Tov'; legend.appendChild(s); }
+
+  // ---- calendario ----
+  const assign = {}; for (const a of schedule.assignments) assign[a.shift] = a.member;
+  const from = isoToUTC(schedule.window.from), to = isoToUTC(schedule.window.to);
+  const months = document.getElementById("months"); months.innerHTML = "";
+  let cur = new Date(Date.UTC(from.getUTCFullYear(), from.getUTCMonth(), 1));
+  while (cur <= to) {
+    const y = cur.getUTCFullYear(), mo = cur.getUTCMonth();
+    const box = el("div", "month");
+    box.appendChild(Object.assign(el("h3"), { textContent: MONTHS[mo] + " " + y }));
+    const grid = el("div", "grid");
+    for (const d of DOW) grid.appendChild(el("div", "dow", d));
+    const first = new Date(Date.UTC(y, mo, 1)).getUTCDay();
+    for (let i = 0; i < first; i++) grid.appendChild(el("div", "cell empty"));
+    const days = new Date(Date.UTC(y, mo + 1, 0)).getUTCDate();
+    for (let d = 1; d <= days; d++) {
+      const iso = y + "-" + String(mo + 1).padStart(2, "0") + "-" + String(d).padStart(2, "0");
+      const cell = el("div", "cell");
+      const dow = new Date(Date.UTC(y, mo, d)).getUTCDay();
+      if (dow === 0 || dow === 5 || dow === 6) cell.classList.add("weekend");
+      if (restr[iso]) { cell.classList.add("restricted"); const tg = el("span", "tag", restr[iso] === "yom_tov" ? "YT" : "S"); cell.appendChild(tg); }
+      cell.appendChild(el("div", "dnum", d));
+      if (iso in assign) {
+        const who = assign[iso];
+        if (who == null) { const w = el("span", "who", "uncovered"); w.style.color = "var(--bad)"; cell.appendChild(w); const tg = el("span", "tag uncov", "!"); cell.appendChild(tg); }
+        else { const w = el("span", "who", who); w.style.background = colors[who] + "33"; w.style.color = colors[who]; cell.appendChild(w); }
+      }
+      grid.appendChild(cell);
+    }
+    box.appendChild(grid); months.appendChild(box);
+    cur = new Date(Date.UTC(y, mo + 1, 1));
+  }
+}
+
+async function tryFetch(path) { try { const r = await fetch(path); if (!r.ok) return null; return await r.json(); } catch { return null; } }
+
+async function boot() {
+  const src = document.getElementById("src");
+  const schedule = await tryFetch("./data/sample.json");
+  if (schedule) {
+    const metrics = await tryFetch("./data/sample.metrics.json");
+    const audit = await tryFetch("./data/sample.audit.json");
+    src.textContent = "Exibindo o exemplo (time platform-sre, Q1 2026). Carregue um schedule.json para ver o seu.";
+    render(schedule, metrics, audit);
+  } else {
+    src.textContent = "Abra via GitHub Pages ou um servidor local (python -m http.server), ou carregue um schedule.json acima.";
+  }
+}
+
+document.getElementById("file").addEventListener("change", (ev) => {
+  const f = ev.target.files[0]; if (!f) return;
+  const reader = new FileReader();
+  reader.onload = () => {
+    try {
+      const schedule = JSON.parse(reader.result);
+      if (!schedule.shifts || !schedule.assignments) throw new Error("nao parece um schedule.json");
+      document.getElementById("err").textContent = "";
+      document.getElementById("src").textContent = "Exibindo: " + f.name + " (metricas recomputadas no navegador; sem audit, nao ha marca de observante/Shabbat)";
+      render(schedule, null, null);
+    } catch (e) { document.getElementById("err").textContent = "Arquivo invalido: " + e.message; }
+  };
+  reader.readAsText(f);
+});
+
+boot();
+</script>
+</body>
+</html>
