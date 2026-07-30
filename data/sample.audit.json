@@ -1,0 +1,1907 @@
+{
+  "records": [
+    {
+      "end_utc": "2026-01-03T15:31:31.195334+00:00",
+      "kind": "shabbat",
+      "member": "dan",
+      "rationale": {
+        "date": "2026-01-03",
+        "end": {
+          "depression_deg": 8.5,
+          "event": "tzais",
+          "fallback": false,
+          "fixed_minutes": null,
+          "shitah": "gra_8.5"
+        },
+        "kind": "shabbat",
+        "location": {
+          "elevation_m": 754.0,
+          "lat": 31.78,
+          "lon": 35.22
+        },
+        "start": {
+          "buffer_min": 18,
+          "eve": "2026-01-02",
+          "event": "shkiah"
+        }
+      },
+      "start_utc": "2026-01-02T14:33:26.926098+00:00",
+      "type": "boundary"
+    },
+    {
+      "end_utc": "2026-01-10T15:36:42.313663+00:00",
+      "kind": "shabbat",
+      "member": "dan",
+      "rationale": {
+        "date": "2026-01-10",
+        "end": {
+          "depression_deg": 8.5,
+          "event": "tzais",
+          "fallback": false,
+          "fixed_minutes": null,
+          "shitah": "gra_8.5"
+        },
+        "kind": "shabbat",
+        "location": {
+          "elevation_m": 754.0,
+          "lat": 31.78,
+          "lon": 35.22
+        },
+        "start": {
+          "buffer_min": 18,
+          "eve": "2026-01-09",
+          "event": "shkiah"
+        }
+      },
+      "start_utc": "2026-01-09T14:38:49.726801+00:00",
+      "type": "boundary"
+    },
+    {
+      "end_utc": "2026-01-17T15:42:21.344896+00:00",
+      "kind": "shabbat",
+      "member": "dan",
+      "rationale": {
+        "date": "2026-01-17",
+        "end": {
+          "depression_deg": 8.5,
+          "event": "tzais",
+          "fallback": false,
+          "fixed_minutes": null,
+          "shitah": "gra_8.5"
+        },
+        "kind": "shabbat",
+        "location": {
+          "elevation_m": 754.0,
+          "lat": 31.78,
+          "lon": 35.22
+        },
+        "start": {
+          "buffer_min": 18,
+          "eve": "2026-01-16",
+          "event": "shkiah"
+        }
+      },
+      "start_utc": "2026-01-16T14:44:48.094079+00:00",
+      "type": "boundary"
+    },
+    {
+      "end_utc": "2026-01-24T15:48:15.769527+00:00",
+      "kind": "shabbat",
+      "member": "dan",
+      "rationale": {
+        "date": "2026-01-24",
+        "end": {
+          "depression_deg": 8.5,
+          "event": "tzais",
+          "fallback": false,
+          "fixed_minutes": null,
+          "shitah": "gra_8.5"
+        },
+        "kind": "shabbat",
+        "location": {
+          "elevation_m": 754.0,
+          "lat": 31.78,
+          "lon": 35.22
+        },
+        "start": {
+          "buffer_min": 18,
+          "eve": "2026-01-23",
+          "event": "shkiah"
+        }
+      },
+      "start_utc": "2026-01-23T14:51:07.382064+00:00",
+      "type": "boundary"
+    },
+    {
+      "end_utc": "2026-01-31T15:54:14.443382+00:00",
+      "kind": "shabbat",
+      "member": "dan",
+      "rationale": {
+        "date": "2026-01-31",
+        "end": {
+          "depression_deg": 8.5,
+          "event": "tzais",
+          "fallback": false,
+          "fixed_minutes": null,
+          "shitah": "gra_8.5"
+        },
+        "kind": "shabbat",
+        "location": {
+          "elevation_m": 754.0,
+          "lat": 31.78,
+          "lon": 35.22
+        },
+        "start": {
+          "buffer_min": 18,
+          "eve": "2026-01-30",
+          "event": "shkiah"
+        }
+      },
+      "start_utc": "2026-01-30T14:57:34.024908+00:00",
+      "type": "boundary"
+    },
+    {
+      "end_utc": "2026-02-07T16:00:08.429029+00:00",
+      "kind": "shabbat",
+      "member": "dan",
+      "rationale": {
+        "date": "2026-02-07",
+        "end": {
+          "depression_deg": 8.5,
+          "event": "tzais",
+          "fallback": false,
+          "fixed_minutes": null,
+          "shitah": "gra_8.5"
+        },
+        "kind": "shabbat",
+        "location": {
+          "elevation_m": 754.0,
+          "lat": 31.78,
+          "lon": 35.22
+        },
+        "start": {
+          "buffer_min": 18,
+          "eve": "2026-02-06",
+          "event": "shkiah"
+        }
+      },
+      "start_utc": "2026-02-06T15:03:56.636150+00:00",
+      "type": "boundary"
+    },
+    {
+      "end_utc": "2026-02-14T16:05:51.520309+00:00",
+      "kind": "shabbat",
+      "member": "dan",
+      "rationale": {
+        "date": "2026-02-14",
+        "end": {
+          "depression_deg": 8.5,
+          "event": "tzais",
+          "fallback": false,
+          "fixed_minutes": null,
+          "shitah": "gra_8.5"
+        },
+        "kind": "shabbat",
+        "location": {
+          "elevation_m": 754.0,
+          "lat": 31.78,
+          "lon": 35.22
+        },
+        "start": {
+          "buffer_min": 18,
+          "eve": "2026-02-13",
+          "event": "shkiah"
+        }
+      },
+      "start_utc": "2026-02-13T15:10:06.737582+00:00",
+      "type": "boundary"
+    },
+    {
+      "end_utc": "2026-02-21T16:11:20.432506+00:00",
+      "kind": "shabbat",
+      "member": "dan",
+      "rationale": {
+        "date": "2026-02-21",
+        "end": {
+          "depression_deg": 8.5,
+          "event": "tzais",
+          "fallback": false,
+          "fixed_minutes": null,
+          "shitah": "gra_8.5"
+        },
+        "kind": "shabbat",
+        "location": {
+          "elevation_m": 754.0,
+          "lat": 31.78,
+          "lon": 35.22
+        },
+        "start": {
+          "buffer_min": 18,
+          "eve": "2026-02-20",
+          "event": "shkiah"
+        }
+      },
+      "start_utc": "2026-02-20T15:15:59.077856+00:00",
+      "type": "boundary"
+    },
+    {
+      "end_utc": "2026-02-28T16:16:34.683869+00:00",
+      "kind": "shabbat",
+      "member": "dan",
+      "rationale": {
+        "date": "2026-02-28",
+        "end": {
+          "depression_deg": 8.5,
+          "event": "tzais",
+          "fallback": false,
+          "fixed_minutes": null,
+          "shitah": "gra_8.5"
+        },
+        "kind": "shabbat",
+        "location": {
+          "elevation_m": 754.0,
+          "lat": 31.78,
+          "lon": 35.22
+        },
+        "start": {
+          "buffer_min": 18,
+          "eve": "2026-02-27",
+          "event": "shkiah"
+        }
+      },
+      "start_utc": "2026-02-27T15:21:31.574905+00:00",
+      "type": "boundary"
+    },
+    {
+      "end_utc": "2026-03-07T16:21:36.222769+00:00",
+      "kind": "shabbat",
+      "member": "dan",
+      "rationale": {
+        "date": "2026-03-07",
+        "end": {
+          "depression_deg": 8.5,
+          "event": "tzais",
+          "fallback": false,
+          "fixed_minutes": null,
+          "shitah": "gra_8.5"
+        },
+        "kind": "shabbat",
+        "location": {
+          "elevation_m": 754.0,
+          "lat": 31.78,
+          "lon": 35.22
+        },
+        "start": {
+          "buffer_min": 18,
+          "eve": "2026-03-06",
+          "event": "shkiah"
+        }
+      },
+      "start_utc": "2026-03-06T15:26:44.958118+00:00",
+      "type": "boundary"
+    },
+    {
+      "end_utc": "2026-03-14T16:26:28.868778+00:00",
+      "kind": "shabbat",
+      "member": "dan",
+      "rationale": {
+        "date": "2026-03-14",
+        "end": {
+          "depression_deg": 8.5,
+          "event": "tzais",
+          "fallback": false,
+          "fixed_minutes": null,
+          "shitah": "gra_8.5"
+        },
+        "kind": "shabbat",
+        "location": {
+          "elevation_m": 754.0,
+          "lat": 31.78,
+          "lon": 35.22
+        },
+        "start": {
+          "buffer_min": 18,
+          "eve": "2026-03-13",
+          "event": "shkiah"
+        }
+      },
+      "start_utc": "2026-03-13T15:31:42.196981+00:00",
+      "type": "boundary"
+    },
+    {
+      "end_utc": "2026-03-21T16:31:17.631524+00:00",
+      "kind": "shabbat",
+      "member": "dan",
+      "rationale": {
+        "date": "2026-03-21",
+        "end": {
+          "depression_deg": 8.5,
+          "event": "tzais",
+          "fallback": false,
+          "fixed_minutes": null,
+          "shitah": "gra_8.5"
+        },
+        "kind": "shabbat",
+        "location": {
+          "elevation_m": 754.0,
+          "lat": 31.78,
+          "lon": 35.22
+        },
+        "start": {
+          "buffer_min": 18,
+          "eve": "2026-03-20",
+          "event": "shkiah"
+        }
+      },
+      "start_utc": "2026-03-20T15:36:27.799053+00:00",
+      "type": "boundary"
+    },
+    {
+      "end_utc": "2026-03-28T16:36:07.964248+00:00",
+      "kind": "shabbat",
+      "member": "dan",
+      "rationale": {
+        "date": "2026-03-28",
+        "end": {
+          "depression_deg": 8.5,
+          "event": "tzais",
+          "fallback": false,
+          "fixed_minutes": null,
+          "shitah": "gra_8.5"
+        },
+        "kind": "shabbat",
+        "location": {
+          "elevation_m": 754.0,
+          "lat": 31.78,
+          "lon": 35.22
+        },
+        "start": {
+          "buffer_min": 18,
+          "eve": "2026-03-27",
+          "event": "shkiah"
+        }
+      },
+      "start_utc": "2026-03-27T15:41:07.045456+00:00",
+      "type": "boundary"
+    },
+    {
+      "end_utc": "2026-04-02T16:39:39.185352+00:00",
+      "kind": "yom_tov",
+      "member": "dan",
+      "rationale": {
+        "date": "2026-04-02",
+        "end": {
+          "depression_deg": 8.5,
+          "event": "tzais",
+          "fallback": false,
+          "fixed_minutes": null,
+          "shitah": "gra_8.5"
+        },
+        "kind": "yom_tov",
+        "location": {
+          "elevation_m": 754.0,
+          "lat": 31.78,
+          "lon": 35.22
+        },
+        "start": {
+          "buffer_min": 18,
+          "eve": "2026-04-01",
+          "event": "shkiah"
+        }
+      },
+      "start_utc": "2026-04-01T15:44:25.564838+00:00",
+      "type": "boundary"
+    },
+    {
+      "end_utc": "2026-01-03T23:13:43.472851+00:00",
+      "kind": "shabbat",
+      "member": "rivka",
+      "rationale": {
+        "date": "2026-01-03",
+        "end": {
+          "depression_deg": null,
+          "event": "tzais",
+          "fallback": false,
+          "fixed_minutes": 72.0,
+          "shitah": "mga_16.1"
+        },
+        "kind": "shabbat",
+        "location": {
+          "elevation_m": 760.0,
+          "lat": -23.55,
+          "lon": -46.63
+        },
+        "start": {
+          "buffer_min": 18,
+          "eve": "2026-01-02",
+          "event": "shkiah"
+        }
+      },
+      "start_utc": "2026-01-02T21:43:28.510430+00:00",
+      "type": "boundary"
+    },
+    {
+      "end_utc": "2026-01-10T23:14:51.430037+00:00",
+      "kind": "shabbat",
+      "member": "rivka",
+      "rationale": {
+        "date": "2026-01-10",
+        "end": {
+          "depression_deg": null,
+          "event": "tzais",
+          "fallback": false,
+          "fixed_minutes": 72.0,
+          "shitah": "mga_16.1"
+        },
+        "kind": "shabbat",
+        "location": {
+          "elevation_m": 760.0,
+          "lat": -23.55,
+          "lon": -46.63
+        },
+        "start": {
+          "buffer_min": 18,
+          "eve": "2026-01-09",
+          "event": "shkiah"
+        }
+      },
+      "start_utc": "2026-01-09T21:44:45.745778+00:00",
+      "type": "boundary"
+    },
+    {
+      "end_utc": "2026-01-17T23:14:52.684586+00:00",
+      "kind": "shabbat",
+      "member": "rivka",
+      "rationale": {
+        "date": "2026-01-17",
+        "end": {
+          "depression_deg": null,
+          "event": "tzais",
+          "fallback": false,
+          "fixed_minutes": 72.0,
+          "shitah": "mga_16.1"
+        },
+        "kind": "shabbat",
+        "location": {
+          "elevation_m": 760.0,
+          "lat": -23.55,
+          "lon": -46.63
+        },
+        "start": {
+          "buffer_min": 18,
+          "eve": "2026-01-16",
+          "event": "shkiah"
+        }
+      },
+      "start_utc": "2026-01-16T21:44:56.660827+00:00",
+      "type": "boundary"
+    },
+    {
+      "end_utc": "2026-01-24T23:13:46.090137+00:00",
+      "kind": "shabbat",
+      "member": "rivka",
+      "rationale": {
+        "date": "2026-01-24",
+        "end": {
+          "depression_deg": null,
+          "event": "tzais",
+          "fallback": false,
+          "fixed_minutes": 72.0,
+          "shitah": "mga_16.1"
+        },
+        "kind": "shabbat",
+        "location": {
+          "elevation_m": 760.0,
+          "lat": -23.55,
+          "lon": -46.63
+        },
+        "start": {
+          "buffer_min": 18,
+          "eve": "2026-01-23",
+          "event": "shkiah"
+        }
+      },
+      "start_utc": "2026-01-23T21:43:59.732308+00:00",
+      "type": "boundary"
+    },
+    {
+      "end_utc": "2026-01-31T23:11:32.969033+00:00",
+      "kind": "shabbat",
+      "member": "rivka",
+      "rationale": {
+        "date": "2026-01-31",
+        "end": {
+          "depression_deg": null,
+          "event": "tzais",
+          "fallback": false,
+          "fixed_minutes": 72.0,
+          "shitah": "mga_16.1"
+        },
+        "kind": "shabbat",
+        "location": {
+          "elevation_m": 760.0,
+          "lat": -23.55,
+          "lon": -46.63
+        },
+        "start": {
+          "buffer_min": 18,
+          "eve": "2026-01-30",
+          "event": "shkiah"
+        }
+      },
+      "start_utc": "2026-01-30T21:41:55.949154+00:00",
+      "type": "boundary"
+    },
+    {
+      "end_utc": "2026-02-07T23:08:16.792990+00:00",
+      "kind": "shabbat",
+      "member": "rivka",
+      "rationale": {
+        "date": "2026-02-07",
+        "end": {
+          "depression_deg": null,
+          "event": "tzais",
+          "fallback": false,
+          "fixed_minutes": 72.0,
+          "shitah": "mga_16.1"
+        },
+        "kind": "shabbat",
+        "location": {
+          "elevation_m": 760.0,
+          "lat": -23.55,
+          "lon": -46.63
+        },
+        "start": {
+          "buffer_min": 18,
+          "eve": "2026-02-06",
+          "event": "shkiah"
+        }
+      },
+      "start_utc": "2026-02-06T21:38:48.495332+00:00",
+      "type": "boundary"
+    },
+    {
+      "end_utc": "2026-02-14T23:04:02.878213+00:00",
+      "kind": "shabbat",
+      "member": "rivka",
+      "rationale": {
+        "date": "2026-02-14",
+        "end": {
+          "depression_deg": null,
+          "event": "tzais",
+          "fallback": false,
+          "fixed_minutes": 72.0,
+          "shitah": "mga_16.1"
+        },
+        "kind": "shabbat",
+        "location": {
+          "elevation_m": 760.0,
+          "lat": -23.55,
+          "lon": -46.63
+        },
+        "start": {
+          "buffer_min": 18,
+          "eve": "2026-02-13",
+          "event": "shkiah"
+        }
+      },
+      "start_utc": "2026-02-13T21:34:42.441185+00:00",
+      "type": "boundary"
+    },
+    {
+      "end_utc": "2026-02-21T22:58:58.110564+00:00",
+      "kind": "shabbat",
+      "member": "rivka",
+      "rationale": {
+        "date": "2026-02-21",
+        "end": {
+          "depression_deg": null,
+          "event": "tzais",
+          "fallback": false,
+          "fixed_minutes": 72.0,
+          "shitah": "mga_16.1"
+        },
+        "kind": "shabbat",
+        "location": {
+          "elevation_m": 760.0,
+          "lat": -23.55,
+          "lon": -46.63
+        },
+        "start": {
+          "buffer_min": 18,
+          "eve": "2026-02-20",
+          "event": "shkiah"
+        }
+      },
+      "start_utc": "2026-02-20T21:29:44.464206+00:00",
+      "type": "boundary"
+    },
+    {
+      "end_utc": "2026-02-28T22:53:10.684084+00:00",
+      "kind": "shabbat",
+      "member": "rivka",
+      "rationale": {
+        "date": "2026-02-28",
+        "end": {
+          "depression_deg": null,
+          "event": "tzais",
+          "fallback": false,
+          "fixed_minutes": 72.0,
+          "shitah": "mga_16.1"
+        },
+        "kind": "shabbat",
+        "location": {
+          "elevation_m": 760.0,
+          "lat": -23.55,
+          "lon": -46.63
+        },
+        "start": {
+          "buffer_min": 18,
+          "eve": "2026-02-27",
+          "event": "shkiah"
+        }
+      },
+      "start_utc": "2026-02-27T21:24:02.587766+00:00",
+      "type": "boundary"
+    },
+    {
+      "end_utc": "2026-03-07T22:46:49.831393+00:00",
+      "kind": "shabbat",
+      "member": "rivka",
+      "rationale": {
+        "date": "2026-03-07",
+        "end": {
+          "depression_deg": null,
+          "event": "tzais",
+          "fallback": false,
+          "fixed_minutes": 72.0,
+          "shitah": "mga_16.1"
+        },
+        "kind": "shabbat",
+        "location": {
+          "elevation_m": 760.0,
+          "lat": -23.55,
+          "lon": -46.63
+        },
+        "start": {
+          "buffer_min": 18,
+          "eve": "2026-03-06",
+          "event": "shkiah"
+        }
+      },
+      "start_utc": "2026-03-06T21:17:45.913486+00:00",
+      "type": "boundary"
+    },
+    {
+      "end_utc": "2026-03-14T22:40:05.527812+00:00",
+      "kind": "shabbat",
+      "member": "rivka",
+      "rationale": {
+        "date": "2026-03-14",
+        "end": {
+          "depression_deg": null,
+          "event": "tzais",
+          "fallback": false,
+          "fixed_minutes": 72.0,
+          "shitah": "mga_16.1"
+        },
+        "kind": "shabbat",
+        "location": {
+          "elevation_m": 760.0,
+          "lat": -23.55,
+          "lon": -46.63
+        },
+        "start": {
+          "buffer_min": 18,
+          "eve": "2026-03-13",
+          "event": "shkiah"
+        }
+      },
+      "start_utc": "2026-03-13T21:11:04.329746+00:00",
+      "type": "boundary"
+    },
+    {
+      "end_utc": "2026-03-21T22:33:08.168820+00:00",
+      "kind": "shabbat",
+      "member": "rivka",
+      "rationale": {
+        "date": "2026-03-21",
+        "end": {
+          "depression_deg": null,
+          "event": "tzais",
+          "fallback": false,
+          "fixed_minutes": 72.0,
+          "shitah": "mga_16.1"
+        },
+        "kind": "shabbat",
+        "location": {
+          "elevation_m": 760.0,
+          "lat": -23.55,
+          "lon": -46.63
+        },
+        "start": {
+          "buffer_min": 18,
+          "eve": "2026-03-20",
+          "event": "shkiah"
+        }
+      },
+      "start_utc": "2026-03-20T21:04:08.192554+00:00",
+      "type": "boundary"
+    },
+    {
+      "end_utc": "2026-03-28T22:26:08.232213+00:00",
+      "kind": "shabbat",
+      "member": "rivka",
+      "rationale": {
+        "date": "2026-03-28",
+        "end": {
+          "depression_deg": null,
+          "event": "tzais",
+          "fallback": false,
+          "fixed_minutes": 72.0,
+          "shitah": "mga_16.1"
+        },
+        "kind": "shabbat",
+        "location": {
+          "elevation_m": 760.0,
+          "lat": -23.55,
+          "lon": -46.63
+        },
+        "start": {
+          "buffer_min": 18,
+          "eve": "2026-03-27",
+          "event": "shkiah"
+        }
+      },
+      "start_utc": "2026-03-27T20:57:07.988678+00:00",
+      "type": "boundary"
+    },
+    {
+      "end_utc": "2026-04-02T22:21:12.383405+00:00",
+      "kind": "yom_tov",
+      "member": "rivka",
+      "rationale": {
+        "date": "2026-04-02",
+        "end": {
+          "depression_deg": null,
+          "event": "tzais",
+          "fallback": false,
+          "fixed_minutes": 72.0,
+          "shitah": "mga_16.1"
+        },
+        "kind": "yom_tov",
+        "location": {
+          "elevation_m": 760.0,
+          "lat": -23.55,
+          "lon": -46.63
+        },
+        "start": {
+          "buffer_min": 18,
+          "eve": "2026-04-01",
+          "event": "shkiah"
+        }
+      },
+      "start_utc": "2026-04-01T20:52:11.066410+00:00",
+      "type": "boundary"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "dan(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 12.0,
+      "member": "rivka",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-01-01",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "sam(load 32.00)"
+      ],
+      "load_after": 33.0,
+      "load_before": 0.0,
+      "member": "alex",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-01-02",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 0.0,
+      "member": "sam",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-01-03",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "rivka(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 0.0,
+      "member": "dan",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-01-04",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "dan(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 13.0,
+      "member": "rivka",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-01-05",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "rivka(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 14.0,
+      "member": "dan",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-01-06",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "dan(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 14.0,
+      "member": "rivka",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-01-07",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "rivka(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 15.0,
+      "member": "dan",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-01-08",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "sam(load 32.00)"
+      ],
+      "load_after": 33.0,
+      "load_before": 2.0,
+      "member": "alex",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-01-09",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 2.0,
+      "member": "sam",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-01-10",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "dan(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 0.0,
+      "member": "rivka",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-01-11",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "dan(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 15.0,
+      "member": "rivka",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-01-12",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "rivka(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 16.0,
+      "member": "dan",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-01-13",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "dan(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 16.0,
+      "member": "rivka",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-01-14",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "rivka(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 17.0,
+      "member": "dan",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-01-15",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "sam(load 32.00)"
+      ],
+      "load_after": 33.0,
+      "load_before": 4.0,
+      "member": "alex",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-01-16",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 4.0,
+      "member": "sam",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-01-17",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "rivka(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 2.0,
+      "member": "dan",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-01-18",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "dan(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 17.0,
+      "member": "rivka",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-01-19",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "rivka(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 18.0,
+      "member": "dan",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-01-20",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "dan(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 18.0,
+      "member": "rivka",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-01-21",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "rivka(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 19.0,
+      "member": "dan",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-01-22",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "sam(load 32.00)"
+      ],
+      "load_after": 33.0,
+      "load_before": 6.0,
+      "member": "alex",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-01-23",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 6.0,
+      "member": "sam",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-01-24",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "dan(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 2.0,
+      "member": "rivka",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-01-25",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "dan(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 19.0,
+      "member": "rivka",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-01-26",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "rivka(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 20.0,
+      "member": "dan",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-01-27",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "dan(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 20.0,
+      "member": "rivka",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-01-28",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "rivka(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 21.0,
+      "member": "dan",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-01-29",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "sam(load 32.00)"
+      ],
+      "load_after": 33.0,
+      "load_before": 8.0,
+      "member": "alex",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-01-30",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 8.0,
+      "member": "sam",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-01-31",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "rivka(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 4.0,
+      "member": "dan",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-02-01",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "dan(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 21.0,
+      "member": "rivka",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-02-02",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "rivka(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 22.0,
+      "member": "dan",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-02-03",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "dan(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 22.0,
+      "member": "rivka",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-02-04",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "rivka(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 23.0,
+      "member": "dan",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-02-05",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "sam(load 32.00)"
+      ],
+      "load_after": 33.0,
+      "load_before": 10.0,
+      "member": "alex",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-02-06",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 10.0,
+      "member": "sam",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-02-07",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "dan(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 4.0,
+      "member": "rivka",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-02-08",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "dan(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 23.0,
+      "member": "rivka",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-02-09",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "rivka(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 24.0,
+      "member": "dan",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-02-10",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "dan(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 24.0,
+      "member": "rivka",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-02-11",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "rivka(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 25.0,
+      "member": "dan",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-02-12",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "sam(load 32.00)"
+      ],
+      "load_after": 33.0,
+      "load_before": 12.0,
+      "member": "alex",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-02-13",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 12.0,
+      "member": "sam",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-02-14",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "rivka(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 6.0,
+      "member": "dan",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-02-15",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "dan(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 25.0,
+      "member": "rivka",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-02-16",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "dan(load 32.00)",
+        "rivka(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 33.0,
+      "load_before": 26.0,
+      "member": "alex",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-02-17",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "rivka(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 26.0,
+      "member": "dan",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-02-18",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "dan(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 26.0,
+      "member": "rivka",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-02-19",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "sam(load 32.00)"
+      ],
+      "load_after": 33.0,
+      "load_before": 14.0,
+      "member": "alex",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-02-20",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 14.0,
+      "member": "sam",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-02-21",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "dan(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 6.0,
+      "member": "rivka",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-02-22",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "dan(load 32.00)",
+        "rivka(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 26.0,
+      "member": "sam",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-02-23",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "dan(load 32.00)",
+        "rivka(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 33.0,
+      "load_before": 27.0,
+      "member": "alex",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-02-24",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "rivka(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 27.0,
+      "member": "dan",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-02-25",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "dan(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 27.0,
+      "member": "rivka",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-02-26",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "sam(load 32.00)"
+      ],
+      "load_after": 33.0,
+      "load_before": 16.0,
+      "member": "alex",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-02-27",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 16.0,
+      "member": "sam",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-02-28",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "rivka(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 8.0,
+      "member": "dan",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-03-01",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "dan(load 32.00)",
+        "rivka(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 27.0,
+      "member": "sam",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-03-02",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "dan(load 32.00)",
+        "rivka(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 33.0,
+      "load_before": 28.0,
+      "member": "alex",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-03-03",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "rivka(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 28.0,
+      "member": "dan",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-03-04",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "dan(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 28.0,
+      "member": "rivka",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-03-05",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "sam(load 32.00)"
+      ],
+      "load_after": 33.0,
+      "load_before": 18.0,
+      "member": "alex",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-03-06",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 18.0,
+      "member": "sam",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-03-07",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "dan(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 8.0,
+      "member": "rivka",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-03-08",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "dan(load 32.00)",
+        "rivka(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 28.0,
+      "member": "sam",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-03-09",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "dan(load 32.00)",
+        "rivka(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 33.0,
+      "load_before": 29.0,
+      "member": "alex",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-03-10",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "rivka(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 29.0,
+      "member": "dan",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-03-11",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "dan(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 29.0,
+      "member": "rivka",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-03-12",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "sam(load 32.00)"
+      ],
+      "load_after": 33.0,
+      "load_before": 20.0,
+      "member": "alex",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-03-13",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 20.0,
+      "member": "sam",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-03-14",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "rivka(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 10.0,
+      "member": "dan",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-03-15",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "dan(load 32.00)",
+        "rivka(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 29.0,
+      "member": "sam",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-03-16",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "dan(load 32.00)",
+        "rivka(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 33.0,
+      "load_before": 30.0,
+      "member": "alex",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-03-17",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "rivka(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 30.0,
+      "member": "dan",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-03-18",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "dan(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 30.0,
+      "member": "rivka",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-03-19",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "sam(load 32.00)"
+      ],
+      "load_after": 33.0,
+      "load_before": 22.0,
+      "member": "alex",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-03-20",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 22.0,
+      "member": "sam",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-03-21",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "dan(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 10.0,
+      "member": "rivka",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-03-22",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "dan(load 32.00)",
+        "rivka(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 30.0,
+      "member": "sam",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-03-23",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "dan(load 32.00)",
+        "rivka(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 33.0,
+      "load_before": 31.0,
+      "member": "alex",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-03-24",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "rivka(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 31.0,
+      "member": "dan",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-03-25",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "dan(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 31.0,
+      "member": "rivka",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-03-26",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "sam(load 32.00)"
+      ],
+      "load_after": 33.0,
+      "load_before": 24.0,
+      "member": "alex",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-03-27",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 24.0,
+      "member": "sam",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-03-28",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "rivka(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 12.0,
+      "member": "dan",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-03-29",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "alex(load 33.00)",
+        "dan(load 32.00)",
+        "rivka(load 32.00)"
+      ],
+      "load_after": 32.0,
+      "load_before": 31.0,
+      "member": "sam",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-03-30",
+      "type": "assignment"
+    },
+    {
+      "alternatives": [
+        "dan(load 32.00)",
+        "rivka(load 32.00)",
+        "sam(load 32.00)"
+      ],
+      "load_after": 33.0,
+      "load_before": 32.0,
+      "member": "alex",
+      "reason": "least_loaded_feasible",
+      "shift": "2026-03-31",
+      "type": "assignment"
+    }
+  ],
+  "run_id": "9cf503e16f6c"
+}

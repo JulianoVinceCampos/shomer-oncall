@@ -1,0 +1,19 @@
+{
+  "coverage": {
+    "ratio": 1.0,
+    "uncovered": 0,
+    "violations": 0
+  },
+  "fairness": {
+    "equity_gap_pct": 1.5504,
+    "gini": 0.005814,
+    "jain": 0.99982,
+    "spread": 1.0
+  },
+  "run_id": "9cf503e16f6c",
+  "window": {
+    "days": 90,
+    "from": "2026-01-01",
+    "to": "2026-03-31"
+  }
+}
