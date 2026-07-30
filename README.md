@@ -171,6 +171,17 @@ Note que `rivka` e `dan` (os observantes) carregam **a mesma weighted load que `
 4. **A opinião haláchica é um parâmetro.** O engine traz defaults mas nunca hard-coda um *psak*.
 5. **Read-only por padrão.** A ferramenta calcula e reporta; nunca muta seu pager sem um passo explícito de export.
 
+## Visualização
+
+Há um visualizador estático (HTML/CSS/JS puro, sem framework nem CDN, coerente com o zero-dependency
+do projeto) que consome a saída real da ferramenta e mostra o scorecard de fairness, a carga por
+membro e um calendário com quem está de plantão cada dia, destacando Shabbat/Yom Tov:
+
+**Ao vivo:** https://julianovincecampos.github.io/shomer-oncall/
+
+Ele carrega um exemplo por padrão e aceita um `schedule.json` seu via file picker. O fonte está em
+[`web/`](web/); localmente, `python -m http.server` dentro de `web/` (ou abra e use o botão de carregar).
+
 ## Testar localmente
 
 ```bash
