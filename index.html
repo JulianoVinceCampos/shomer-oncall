@@ -3,124 +3,161 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>shomer-oncall :: visualizador de escala</title>
+<title>shomer-oncall :: escala de plantao que respeita o Shabat</title>
+<meta name="description" content="Escala de plantao (on-call) que respeita o Shabat e os feriados judaicos, com divisao justa da carga. Visualizador em portugues." />
 <style>
   :root {
-    --bg: #0d1117; --panel: #161b22; --panel2: #1c2230; --line: #2a3140;
-    --fg: #e6edf3; --muted: #9aa6b2; --accent: #58a6ff; --good: #3fb950;
-    --warn: #d29922; --bad: #f85149; --shabbat: #7c5cff;
+    --azul: #0038b8;        /* azul da bandeira de Israel */
+    --azul-claro: #4a77e5;
+    --azul-bg: #eef4ff;
+    --branco: #ffffff;
+    --fg: #0b1b3a; --muted: #5b6b8c; --line: #cdd9f0;
+    --good: #1a7f37; --bad: #c0392b; --star: #0038b8;
   }
   * { box-sizing: border-box; }
-  body {
-    margin: 0; background: var(--bg); color: var(--fg);
-    font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.5;
-  }
-  header {
-    padding: 28px 24px 18px; border-bottom: 1px solid var(--line);
-    background: linear-gradient(180deg, #12182280, transparent);
-  }
-  h1 { margin: 0; font-size: 1.5rem; letter-spacing: .3px; }
-  h1 .sh { color: var(--shabbat); }
-  .sub { color: var(--muted); margin-top: 6px; font-size: .95rem; }
-  main { max-width: 1120px; margin: 0 auto; padding: 22px 24px 60px; }
-  section { margin-top: 30px; }
-  h2 { font-size: 1.05rem; margin: 0 0 14px; font-weight: 600; }
-  h2 .hint { color: var(--muted); font-weight: 400; font-size: .85rem; }
+  body { margin: 0; background: var(--branco); color: var(--fg);
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; line-height: 1.55; }
 
-  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
-  .card {
-    background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px;
-  }
+  header { background: linear-gradient(180deg, var(--azul), #002a8c); color: #fff; padding: 30px 24px 22px; }
+  .head-inner { max-width: 1120px; margin: 0 auto; display: flex; align-items: center; gap: 18px; }
+  .logo { width: 56px; height: 56px; flex: none; }
+  h1 { margin: 0; font-size: 1.7rem; letter-spacing: .3px; }
+  h1 .heb { font-weight: 400; opacity: .85; margin-left: 8px; font-size: 1.2rem; }
+  .tagline { margin: 4px 0 0; color: #d6e2ff; font-size: 1rem; }
+
+  main { max-width: 1120px; margin: 0 auto; padding: 8px 24px 60px; }
+  .intro { background: var(--azul-bg); border: 1px solid var(--line); border-left: 4px solid var(--azul);
+    border-radius: 10px; padding: 16px 20px; margin-top: 22px; }
+  .intro p { margin: 8px 0; }
+  .intro b { color: var(--azul); }
+
+  section { margin-top: 32px; }
+  h2 { font-size: 1.15rem; margin: 0 0 6px; color: var(--azul); display: flex; align-items: center; gap: 8px; }
+  h2 .md { color: var(--star); }
+  .h2exp { color: var(--muted); font-size: .9rem; margin: 0 0 14px; }
+
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; }
+  .card { background: var(--branco); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px;
+    box-shadow: 0 1px 2px #0038b810; }
   .card .k { color: var(--muted); font-size: .78rem; text-transform: uppercase; letter-spacing: .5px; }
-  .card .v { font-size: 1.7rem; font-weight: 700; margin-top: 4px; }
+  .card .v { font-size: 1.8rem; font-weight: 800; margin-top: 2px; color: var(--azul); }
   .card .v.ok { color: var(--good); } .card .v.bad { color: var(--bad); }
+  .card .exp { color: var(--muted); font-size: .8rem; margin-top: 4px; }
 
-  .banner {
-    margin-top: 18px; background: var(--panel2); border: 1px solid var(--line);
-    border-left: 3px solid var(--shabbat); border-radius: 8px; padding: 12px 16px; color: var(--fg);
-  }
-  .banner b { color: #fff; }
+  .banner { margin-top: 18px; background: var(--azul-bg); border: 1px solid var(--line);
+    border-left: 4px solid var(--star); border-radius: 10px; padding: 14px 18px; }
+  .banner b { color: var(--azul); }
 
   .bars { display: flex; flex-direction: column; gap: 10px; }
-  .bar-row { display: grid; grid-template-columns: 130px 1fr 120px; align-items: center; gap: 12px; }
-  .bar-name { font-weight: 600; display: flex; align-items: center; gap: 7px; }
-  .swatch { width: 12px; height: 12px; border-radius: 3px; flex: none; }
-  .star { color: var(--shabbat); }
-  .bar-track { background: #0b0f16; border: 1px solid var(--line); border-radius: 6px; height: 22px; overflow: hidden; }
+  .bar-row { display: grid; grid-template-columns: 150px 1fr 130px; align-items: center; gap: 12px; }
+  .bar-name { font-weight: 700; display: flex; align-items: center; gap: 7px; }
+  .swatch { width: 13px; height: 13px; border-radius: 3px; flex: none; }
+  .star { color: var(--star); }
+  .bar-track { background: #f0f4fc; border: 1px solid var(--line); border-radius: 6px; height: 24px; overflow: hidden; }
   .bar-fill { height: 100%; }
   .bar-meta { color: var(--muted); font-size: .85rem; text-align: right; }
 
-  .legend { display: flex; flex-wrap: wrap; gap: 14px; margin: 4px 0 16px; color: var(--muted); font-size: .88rem; }
+  .legend { display: flex; flex-wrap: wrap; gap: 16px; margin: 2px 0 16px; color: var(--muted); font-size: .9rem; }
   .legend span { display: inline-flex; align-items: center; gap: 6px; }
 
-  .months { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
-  .month h3 { margin: 0 0 8px; font-size: .95rem; font-weight: 600; }
+  .months { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 22px; }
+  .month h3 { margin: 0 0 8px; font-size: 1rem; color: var(--azul); }
   .grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; }
-  .dow { color: var(--muted); font-size: .7rem; text-align: center; padding: 2px 0; }
-  .cell {
-    min-height: 52px; border: 1px solid var(--line); border-radius: 6px; padding: 4px 5px;
-    background: var(--panel); position: relative; overflow: hidden;
-  }
+  .dow { color: var(--muted); font-size: .72rem; text-align: center; padding: 2px 0; font-weight: 600; }
+  .cell { min-height: 54px; border: 1px solid var(--line); border-radius: 7px; padding: 4px 5px;
+    background: var(--branco); position: relative; overflow: hidden; }
   .cell.empty { background: transparent; border-color: transparent; }
-  .cell.weekend { background: #12151c; }
-  .cell.restricted { outline: 1px solid var(--shabbat); }
-  .cell .dnum { font-size: .7rem; color: var(--muted); }
-  .cell .who { font-size: .74rem; font-weight: 600; margin-top: 3px; border-radius: 4px; padding: 1px 4px; display: inline-block; }
-  .cell .tag { position: absolute; top: 3px; right: 4px; font-size: .6rem; color: var(--shabbat); font-weight: 700; }
-  .cell .tag.uncov { color: var(--bad); }
+  .cell.weekend { background: #f4f7fe; }
+  .cell.restricted { outline: 2px solid var(--star); outline-offset: -1px; }
+  .cell .dnum { font-size: .72rem; color: var(--muted); font-weight: 600; }
+  .cell .who { font-size: .74rem; font-weight: 700; margin-top: 3px; border-radius: 5px; padding: 1px 5px; display: inline-block; }
+  .cell .tag { position: absolute; top: 3px; right: 4px; font-size: .82rem; color: var(--star); }
+  .cell .tag.uncov { color: var(--bad); font-weight: 800; }
 
-  .toolbar { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin-top: 10px; }
-  .btn {
-    background: var(--panel2); border: 1px solid var(--line); color: var(--fg);
-    border-radius: 8px; padding: 8px 12px; cursor: pointer; font-size: .88rem;
-  }
-  .btn:hover { border-color: var(--accent); }
-  .note { color: var(--muted); font-size: .82rem; }
-  a { color: var(--accent); }
-  footer { color: var(--muted); font-size: .8rem; margin-top: 40px; border-top: 1px solid var(--line); padding-top: 16px; }
-  #err { color: var(--warn); }
+  .toolbar { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin-top: 14px; }
+  .btn { background: #fff; border: 1px solid var(--azul); color: var(--azul); border-radius: 8px;
+    padding: 8px 14px; cursor: pointer; font-size: .9rem; font-weight: 600; }
+  .btn:hover { background: var(--azul); color: #fff; }
+  .note { color: #d6e2ff; font-size: .84rem; }
+  a { color: var(--azul); }
+  footer { color: var(--muted); font-size: .84rem; margin-top: 44px; border-top: 1px solid var(--line); padding-top: 18px; }
+  #err { color: var(--bad); font-weight: 600; }
 </style>
 </head>
 <body>
 <header>
-  <h1><span class="sh">shomer</span>-oncall</h1>
-  <div class="sub">Rotacao de plantao ciente do calendario hebraico. Este visualizador le a saida
-    real da ferramenta (<code>schedule.json</code>) e mostra a escala e a fairness.</div>
-  <div class="toolbar">
-    <label class="btn">Carregar schedule.json
-      <input id="file" type="file" accept="application/json" style="display:none" />
-    </label>
-    <span class="note" id="src"></span>
+  <div class="head-inner">
+    <svg class="logo" viewBox="0 0 100 100" aria-label="Estrela de David" role="img">
+      <polygon points="50,6 89,73 11,73" fill="none" stroke="#ffffff" stroke-width="6" stroke-linejoin="round"/>
+      <polygon points="50,94 11,27 89,27" fill="none" stroke="#ffffff" stroke-width="6" stroke-linejoin="round"/>
+    </svg>
+    <div>
+      <h1>shomer-oncall <span class="heb">שומר</span></h1>
+      <p class="tagline">Escala de plantao (on-call) que respeita o Shabat e os feriados judaicos, com divisao justa da carga.</p>
+      <div class="toolbar">
+        <label class="btn">Carregar minha escala (schedule.json)
+          <input id="file" type="file" accept="application/json" style="display:none" />
+        </label>
+        <span class="note" id="src"></span>
+      </div>
+    </div>
   </div>
-  <div id="err"></div>
 </header>
 <main>
+  <div id="err"></div>
+
+  <div class="intro">
+    <p><b>O que e isto?</b> Em times de plantao, alguem fica de sobreaviso a cada dia para responder a
+    incidentes. Quem observa o <b>Shabat</b> (do por do sol de sexta ao anoitecer de sabado) e os
+    <b>feriados judaicos</b> nao pode ser acionado nesses periodos.</p>
+    <p>O <b>shomer-oncall</b> monta a escala garantindo que ninguem seja escalado quando nao pode
+    atender, e ao mesmo tempo mantem a <b>carga de trabalho justa</b> entre todos. As fronteiras do
+    Shabat sao calculadas pela posicao do sol (por do sol e anoitecer) no local exato de cada pessoa,
+    nao por um horario fixo de tabela.</p>
+    <p class="note" style="color:var(--muted)">Esta pagina le a saida real da ferramenta e mostra a
+    escala e as metricas. Voce pode carregar a sua propria escala no botao acima.</p>
+  </div>
+
   <section id="banner-wrap"></section>
-  <section id="score"><h2>Fairness <span class="hint">- medida em weighted load, nao em contagem de shifts</span></h2><div id="cards" class="cards"></div></section>
-  <section id="loadsec"><h2>Carga por membro <span class="hint">- observantes marcados com estrela</span></h2><div id="bars" class="bars"></div></section>
-  <section id="calsec"><h2>Escala <span class="hint">- cada dia colorido por quem esta de plantao; dias de Shabbat/Yom Tov com contorno roxo</span></h2>
+
+  <section id="score">
+    <h2><span class="md">&#10017;</span> Justica da divisao</h2>
+    <p class="h2exp">A carga e medida pelo peso dos plantoes (fim de semana e feriado pesam mais), nao pelo numero de dias.</p>
+    <div id="cards" class="cards"></div>
+  </section>
+
+  <section id="loadsec">
+    <h2><span class="md">&#10017;</span> Carga por pessoa</h2>
+    <p class="h2exp">Quem observa o Shabat aparece com a estrela. A barra mostra a carga total de plantao no periodo.</p>
+    <div id="bars" class="bars"></div>
+  </section>
+
+  <section id="calsec">
+    <h2><span class="md">&#10017;</span> Calendario de plantao</h2>
+    <p class="h2exp">Cada dia mostra quem esta de plantao, com a cor da pessoa. Dias de Shabat e feriado
+      judaico tem borda azul e a Estrela de David.</p>
     <div id="legend" class="legend"></div>
     <div id="months" class="months"></div>
   </section>
+
   <footer>
-    Gerado por <a href="https://github.com/JulianoVinceCampos/shomer-oncall">shomer-oncall</a> -
-    zero dependencia de runtime, saida deterministica. Este visualizador tambem e HTML/CSS/JS puro,
-    sem framework nem CDN.
+    Feito com <a href="https://github.com/JulianoVinceCampos/shomer-oncall">shomer-oncall</a>: codigo
+    aberto, sem dependencias, resultado deterministico. Esta pagina tambem e HTML, CSS e JavaScript
+    puro, sem framework nem bibliotecas externas. As cores homenageiam a bandeira de Israel.
   </footer>
 </main>
 
 <script>
 "use strict";
 
-const PALETTE = ["#58a6ff", "#3fb950", "#d29922", "#f778ba", "#a371f7", "#ff7b72", "#39c5cf", "#e3b341"];
+const PALETTE = ["#0038b8", "#1a7f37", "#c0392b", "#8e44ad", "#b9770e", "#1f6f8b", "#c2185b", "#41637e"];
 const DOW = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sab"];
 const MONTHS = ["Janeiro","Fevereiro","Marco","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"];
+const STAR = "\u2721"; // Estrela de David
 
 function el(tag, cls, txt) { const e = document.createElement(tag); if (cls) e.className = cls; if (txt != null) e.textContent = txt; return e; }
 function isoToUTC(iso) { return new Date(iso.length <= 10 ? iso + "T00:00:00Z" : iso); }
 
-// ---- metricas (client-side, funcionam com qualquer schedule.json) ----
 function jain(v) { const n = v.length; if (!n) return 1; const d = n * v.reduce((a, x) => a + x * x, 0); if (!d) return 1; const s = v.reduce((a, x) => a + x, 0); return s * s / d; }
 function gini(v) { const n = v.length, t = v.reduce((a, x) => a + x, 0); if (!n || !t) return 0; let s = 0; for (const a of v) for (const b of v) s += Math.abs(a - b); return s / (2 * n * t); }
 function spread(v) { return v.length ? Math.max(...v) - Math.min(...v) : 0; }
@@ -142,7 +179,6 @@ function observersFromAudit(audit) {
   return obs;
 }
 
-// dias com restricao (Shabbat/Yom Tov) a partir do audit trail
 function restrictedDays(audit) {
   const map = {};
   if (!audit || !audit.records) return map;
@@ -150,9 +186,7 @@ function restrictedDays(audit) {
     if (r.type !== "boundary") continue;
     const start = isoToUTC(r.start_utc), end = isoToUTC(r.end_utc);
     for (let t = new Date(Date.UTC(start.getUTCFullYear(), start.getUTCMonth(), start.getUTCDate()));
-         t <= end; t.setUTCDate(t.getUTCDate() + 1)) {
-      map[t.toISOString().slice(0, 10)] = r.kind;
-    }
+         t <= end; t.setUTCDate(t.getUTCDate() + 1)) map[t.toISOString().slice(0, 10)] = r.kind;
   }
   return map;
 }
@@ -168,7 +202,6 @@ function render(schedule, metrics, audit) {
   const total = loads.reduce((a, x) => a + x, 0);
   const restr = restrictedDays(audit);
 
-  // ---- scorecard ----
   const j = metrics?.fairness?.jain ?? jain(loads);
   const g = metrics?.fairness?.gini ?? gini(loads);
   const sp = metrics?.fairness?.spread ?? spread(loads);
@@ -178,29 +211,27 @@ function render(schedule, metrics, audit) {
   const uncov = metrics?.coverage?.uncovered ?? schedule.assignments.filter(a => a.member == null).length;
 
   const cards = document.getElementById("cards"); cards.innerHTML = "";
-  const card = (k, v, cls) => { const c = el("div", "card"); c.appendChild(el("div", "k", k)); c.appendChild(el("div", "v" + (cls ? " " + cls : ""), v)); cards.appendChild(c); };
-  card("Jain index", j.toFixed(4), j >= 0.95 ? "ok" : "bad");
-  card("Gini", g.toFixed(4));
-  card("Weighted spread", sp.toFixed(2), sp <= 3 ? "ok" : "bad");
-  if (gap != null) card("Gap observer/non", gap.toFixed(2) + "%", gap <= 5 ? "ok" : "bad");
-  if (cov != null) card("Coverage", Math.round(cov * 100) + "%", cov >= 1 ? "ok" : "bad");
-  card("Violations", viol != null ? viol : "-", (viol === 0 || viol == null) ? "ok" : "bad");
-  card("Uncovered", uncov, uncov === 0 ? "ok" : "bad");
+  const card = (k, v, exp, cls) => { const c = el("div", "card"); c.appendChild(el("div", "k", k));
+    c.appendChild(el("div", "v" + (cls ? " " + cls : ""), v)); c.appendChild(el("div", "exp", exp)); cards.appendChild(c); };
+  card("Indice de igualdade", j.toFixed(3), "1,000 = carga perfeitamente igual entre todos", j >= 0.95 ? "ok" : "bad");
+  card("Desigualdade (Gini)", g.toFixed(3), "0 = todos com a mesma carga");
+  card("Diferenca max-min", sp.toFixed(2), "distancia entre quem mais e quem menos trabalhou");
+  if (gap != null) card("Observante x nao", gap.toFixed(2) + "%", "diferenca de carga entre quem guarda e quem nao guarda o Shabat", gap <= 5 ? "ok" : "bad");
+  if (cov != null) card("Cobertura", Math.round(cov * 100) + "%", "percentual de dias com plantonista definido", cov >= 1 ? "ok" : "bad");
+  card("Violacoes", viol != null ? viol : "-", "vezes em que alguem foi escalado sem poder (tem que ser 0)", (viol === 0 || viol == null) ? "ok" : "bad");
 
-  // ---- banner (a tese) ----
   const bw = document.getElementById("banner-wrap"); bw.innerHTML = "";
   if (observers.size) {
     const eq = total / members.length;
     const obsLoads = members.filter(m => observers.has(m)).map(m => load[m]);
     const obsAvg = obsLoads.reduce((a, x) => a + x, 0) / (obsLoads.length || 1);
     const b = el("div", "banner");
-    b.innerHTML = "<b>" + [...observers].sort().join(", ") + "</b> (observantes) carregam em media <b>"
-      + obsAvg.toFixed(1) + "</b> de weighted load, contra a media geral de <b>" + eq.toFixed(1)
-      + "</b> - sem pegar nenhum shift de sexta/sabado. Fairness medida, nao afirmada.";
+    b.innerHTML = "Quem observa o Shabat (<b>" + [...observers].sort().join(", ") + "</b>) carrega em media <b>"
+      + obsAvg.toFixed(1) + "</b> de carga, contra a media geral de <b>" + eq.toFixed(1)
+      + "</b>, sem pegar nenhum plantao de sexta a noite ou sabado. A justica e medida, nao prometida.";
     bw.appendChild(b);
   }
 
-  // ---- barras de carga ----
   const bars = document.getElementById("bars"); bars.innerHTML = "";
   const max = Math.max(...loads, 1);
   for (const m of members) {
@@ -208,24 +239,23 @@ function render(schedule, metrics, audit) {
     const name = el("div", "bar-name");
     const sw = el("span", "swatch"); sw.style.background = colors[m]; name.appendChild(sw);
     name.appendChild(el("span", null, m));
-    if (observers.has(m)) { const st = el("span", "star", "\u2726"); name.appendChild(st); }
+    if (observers.has(m)) name.appendChild(el("span", "star", STAR));
     row.appendChild(name);
     const track = el("div", "bar-track");
     const fill = el("div", "bar-fill"); fill.style.width = (load[m] / max * 100).toFixed(1) + "%"; fill.style.background = colors[m];
     track.appendChild(fill); row.appendChild(track);
-    row.appendChild(el("div", "bar-meta", count[m] + " shifts \u00b7 " + load[m].toFixed(1) + " load"));
+    row.appendChild(el("div", "bar-meta", count[m] + " plantoes \u00b7 carga " + load[m].toFixed(1)));
     bars.appendChild(row);
   }
 
-  // ---- legenda ----
   const legend = document.getElementById("legend"); legend.innerHTML = "";
   for (const m of members) {
     const s = el("span"); const sw = el("span", "swatch"); sw.style.background = colors[m];
-    s.appendChild(sw); s.appendChild(el("span", null, m + (observers.has(m) ? " \u2726" : ""))); legend.appendChild(s);
+    s.appendChild(sw); s.appendChild(el("span", null, m + (observers.has(m) ? " " + STAR : ""))); legend.appendChild(s);
   }
-  { const s = el("span"); s.innerHTML = '<span class="swatch" style="background:transparent;outline:1px solid var(--shabbat)"></span> Shabbat / Yom Tov'; legend.appendChild(s); }
+  { const s = el("span"); s.innerHTML = '<span class="swatch" style="background:#fff;outline:2px solid var(--star)"></span> ' + STAR + ' Shabat / feriado judaico'; legend.appendChild(s); }
+  { const s = el("span"); s.innerHTML = '<span class="swatch" style="background:#f4f7fe;border:1px solid var(--line)"></span> fim de semana'; legend.appendChild(s); }
 
-  // ---- calendario ----
   const assign = {}; for (const a of schedule.assignments) assign[a.shift] = a.member;
   const from = isoToUTC(schedule.window.from), to = isoToUTC(schedule.window.to);
   const months = document.getElementById("months"); months.innerHTML = "";
@@ -244,12 +274,12 @@ function render(schedule, metrics, audit) {
       const cell = el("div", "cell");
       const dow = new Date(Date.UTC(y, mo, d)).getUTCDay();
       if (dow === 0 || dow === 5 || dow === 6) cell.classList.add("weekend");
-      if (restr[iso]) { cell.classList.add("restricted"); const tg = el("span", "tag", restr[iso] === "yom_tov" ? "YT" : "S"); cell.appendChild(tg); }
+      if (restr[iso]) { cell.classList.add("restricted"); cell.appendChild(el("span", "tag", STAR)); }
       cell.appendChild(el("div", "dnum", d));
       if (iso in assign) {
         const who = assign[iso];
-        if (who == null) { const w = el("span", "who", "uncovered"); w.style.color = "var(--bad)"; cell.appendChild(w); const tg = el("span", "tag uncov", "!"); cell.appendChild(tg); }
-        else { const w = el("span", "who", who); w.style.background = colors[who] + "33"; w.style.color = colors[who]; cell.appendChild(w); }
+        if (who == null) { const w = el("span", "who", "sem cobertura"); w.style.color = "var(--bad)"; cell.appendChild(w); cell.appendChild(el("span", "tag uncov", "!")); }
+        else { const w = el("span", "who", who); w.style.background = colors[who] + "22"; w.style.color = colors[who]; cell.appendChild(w); }
       }
       grid.appendChild(cell);
     }
@@ -266,10 +296,10 @@ async function boot() {
   if (schedule) {
     const metrics = await tryFetch("./data/sample.metrics.json");
     const audit = await tryFetch("./data/sample.audit.json");
-    src.textContent = "Exibindo o exemplo (time platform-sre, Q1 2026). Carregue um schedule.json para ver o seu.";
+    src.textContent = "Exemplo: time platform-sre, jan a mar de 2026.";
     render(schedule, metrics, audit);
   } else {
-    src.textContent = "Abra via GitHub Pages ou um servidor local (python -m http.server), ou carregue um schedule.json acima.";
+    src.textContent = "Carregue um schedule.json no botao ao lado (ou abra via servidor local).";
   }
 }
 
@@ -281,7 +311,7 @@ document.getElementById("file").addEventListener("change", (ev) => {
       const schedule = JSON.parse(reader.result);
       if (!schedule.shifts || !schedule.assignments) throw new Error("nao parece um schedule.json");
       document.getElementById("err").textContent = "";
-      document.getElementById("src").textContent = "Exibindo: " + f.name + " (metricas recomputadas no navegador; sem audit, nao ha marca de observante/Shabbat)";
+      document.getElementById("src").textContent = "Exibindo: " + f.name;
       render(schedule, null, null);
     } catch (e) { document.getElementById("err").textContent = "Arquivo invalido: " + e.message; }
   };
