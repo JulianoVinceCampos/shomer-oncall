@@ -40,10 +40,10 @@ dev = [
 shomer-oncall = "shomer_oncall.cli:main"
 
 [project.urls]
-Homepage = "https://example.com/shomer-oncall"
-Documentation = "https://example.com/shomer-oncall/docs"
-Repository = "https://example.com/shomer-oncall"
-Changelog = "https://example.com/shomer-oncall/blob/main/CHANGELOG.md"
+Homepage = "https://github.com/JulianoVinceCampos/shomer-oncall"
+Documentation = "https://github.com/JulianoVinceCampos/shomer-oncall#readme"
+Repository = "https://github.com/JulianoVinceCampos/shomer-oncall"
+Changelog = "https://github.com/JulianoVinceCampos/shomer-oncall/blob/main/CHANGELOG.md"
 
 [tool.ruff]
 line-length = 100
