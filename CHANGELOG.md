@@ -31,4 +31,4 @@ e este projeto adere ao [Versionamento Semântico](https://semver.org/lang/pt-BR
   de time em YAML), `dev` (tooling de teste/lint). Ver `docs/ROADMAP.md` para os
   próximos passos.
 
-[Unreleased]: https://example.com/shomer-oncall/compare/main...HEAD
+[Unreleased]: https://github.com/JulianoVinceCampos/shomer-oncall/compare/main...HEAD
